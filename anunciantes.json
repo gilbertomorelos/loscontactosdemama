@@ -1,0 +1,200 @@
+[
+  {
+    "nombre": "Colegio Gran Bretaña",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "escuela1.png",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela B",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "escuela2.png",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela C",
+    "descripcion": "Talleres de Arte",
+    "imagen": "colegio1.png",
+    "enlace": "escuelaC.html",
+    "contacto": "gilbertomorelos@hotmail.com | 4421697170",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela D",
+    "descripcion": "Clases de Música",
+    "imagen": "escuela4.png",
+    "enlace": "escuelaD.html",
+    "contacto": "contacto@escuelaD.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela E",
+    "descripcion": "Apoyo Escolar",
+    "imagen": "",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "basico"
+  },
+  {
+    "nombre": "Escuela F",
+    "descripcion": "Taller de Ciencia",
+    "imagen": "",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "basico"
+  },
+
+ {
+    "nombre": "Colegio Gran Bretaña",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "escuela1.png",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela B",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "escuela2.png",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela C",
+    "descripcion": "Talleres de Arte",
+    "imagen": "colegio1.png",
+    "enlace": "escuelaC.html",
+    "contacto": "hola@escuelaC.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela D",
+    "descripcion": "Clases de Música",
+    "imagen": "escuela4.png",
+    "enlace": "escuelaD.html",
+    "contacto": "contacto@escuelaD.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela E",
+    "descripcion": "Apoyo Escolar",
+    "imagen": "",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "basico"
+  },
+  {
+    "nombre": "Escuela F",
+    "descripcion": "Taller de Ciencia",
+    "imagen": "",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "basico"
+  },
+
+{
+    "nombre": "Colegio Gran Bretaña",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "escuela1.png",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela B",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "escuela2.png",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela C",
+    "descripcion": "Talleres de Arte",
+    "imagen": "colegio1.png",
+    "enlace": "escuelaC.html",
+    "contacto": "gilbertomorelos@hotmail.com | 4421697170",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela D",
+    "descripcion": "Clases de Música",
+    "imagen": "escuela4.png",
+    "enlace": "escuelaD.html",
+    "contacto": "contacto@escuelaD.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela E",
+    "descripcion": "Apoyo Escolar",
+    "imagen": "",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "basico"
+  },
+  {
+    "nombre": "Escuela F",
+    "descripcion": "Taller de Ciencia",
+    "imagen": "",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "basico"
+  },
+
+ {
+    "nombre": "Colegio Gran Bretaña",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "escuela1.png",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela B",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "escuela2.png",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela C",
+    "descripcion": "Talleres de Arte",
+    "imagen": "colegio1.png",
+    "enlace": "escuelaC.html",
+    "contacto": "hola@escuelaC.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela D",
+    "descripcion": "Clases de Música",
+    "imagen": "escuela4.png",
+    "enlace": "escuelaD.html",
+    "contacto": "contacto@escuelaD.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela E",
+    "descripcion": "Apoyo Escolar",
+    "imagen": "",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "basico"
+  },
+  {
+    "nombre": "Escuela F",
+    "descripcion": "Taller de Ciencia",
+    "imagen": "",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "basico"
+  }
+
+
+
+]
