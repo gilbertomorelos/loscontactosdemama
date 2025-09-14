@@ -156,6 +156,59 @@
             }
         }
 
+
+/* =======================
+   MÓVILES PEQUEÑOS (iPhone)
+======================= */
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column;  /* logo y texto uno encima del otro */
+        align-items: flex-start;
+        padding: 0.3rem 0.5rem;
+        gap: 10px;  /* reduce espacio entre logo y texto */
+    }
+
+    .logo {
+        height: 50px;       /* reduce tamaño del logo */
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .brand-text {
+        text-align: left;
+        line-height: 1;
+    }
+
+    .logo-text {
+        font-size: 0.9rem;   /* texto más pequeño */
+    }
+
+    .tagline {
+        font-size: 0.55rem;  /* tagline más pequeño */
+    }
+
+    .nav {
+        position: absolute;
+        top: 55px;       /* ajusta según header compacto */
+        right: 10px;
+        width: 160px;
+        gap: 0.8rem;
+        padding: 0.5rem;
+        border-radius: 6px;
+    }
+
+    .nav a {
+        padding: 5px 8px;
+        font-size: 0.85rem;  /* enlaces más compactos */
+    }
+
+    .nav-toggle {
+        font-size: 1.5rem;   /* hamburguesa proporcional */
+    }
+}
+
+
+
         /* =======================
            HERO
         ======================= */
