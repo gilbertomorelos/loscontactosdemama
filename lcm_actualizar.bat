@@ -18,8 +18,8 @@ if "%commit_msg%"=="" (
 REM Hacer commit
 "C:\Program Files\Git\cmd\git.exe" commit -m "%commit_msg%"
 
-REM Subir cambios al repositorio remoto en GitHub
-"C:\Program Files\Git\cmd\git.exe" push https://gilbertomorelos@github.com/gilbertomorelos/loscontactosdemama.git main
+REM Subir cambios al repositorio remoto en GitHub a la rama master
+"C:\Program Files\Git\cmd\git.exe" push https://gilbertomorelos@github.com/gilbertomorelos/loscontactosdemama.git master
 
 echo.
 echo ¡Listo! Los cambios se subieron a GitHub.
