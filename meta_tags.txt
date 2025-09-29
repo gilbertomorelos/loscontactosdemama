@@ -1,0 +1,194 @@
+SEO - Optimizacion para buscadores
+
+## 🧠 Paso 1: Metaetiquetas en el `<head>`
+📍 **Ubicación:** Dentro de `<head>`, justo después de `<meta charset="UTF-8">`
+
+### 🔧 Código a insertar:
+```html
+<meta name="description" content="Directorio confiable de negocios locales para mamás en Querétaro. Encuentra escuelas, médicos, eventos y más.">
+<meta name="keywords" content="directorio Querétaro, negocios para mamás, anuncios locales, servicios familiares">
+<meta name="author" content="Los Contactos de Mamá">
+```
+
+### 🎯 ¿Por qué y para qué?
+- **`description`**: Aparece en los resultados de búsqueda. Debe ser clara y atractiva.
+- **`keywords`**: Aunque Google ya no la usa directamente, otros motores sí.
+- **`author`**: Refuerza la identidad del sitio.
+
+---
+
+## 🧠 Paso 2: Etiqueta `<title>` optimizada
+📍 **Ubicación:** Dentro de `<head>`, reemplaza la actual `<title>`
+
+### 🔧 Código sugerido:
+```html
+<title>Directorio Familiar en Querétaro | Los Contactos de Mamá</title>
+```
+
+### 🎯 ¿Por qué y para qué?
+- Es lo primero que ve Google y los usuarios en pestañas y resultados.
+- Incluir ubicación y propósito mejora el posicionamiento local.
+
+---
+
+## 🧠 Paso 3: Datos estructurados (Schema.org)
+📍 **Ubicación:** Dentro de `<head>`, justo antes de `<style>`
+
+### 🔧 Código a insertar:
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Los Contactos de Mamá",
+  "url": "https://loscontactosdemama.com.mx",
+  "telephone": "+52 442 1697170",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Querétaro",
+    "addressRegion": "QRO",
+    "addressCountry": "MX"
+  },
+  "description": "Directorio confiable de negocios locales para mamás en Querétaro. Encuentra escuelas, médicos, eventos y más."
+}
+</script>
+```
+
+### 🎯 ¿Por qué y para qué?
+- Ayuda a Google a entender que tu sitio es un negocio local.
+- Puede activar resultados enriquecidos (como tarjetas con dirección y teléfono).
+
+---
+
+## 🧠 Paso 4: Etiquetas Open Graph (para redes sociales)
+📍 **Ubicación:** Dentro de `<head>`, justo antes de `<title>`
+
+### 🔧 Código a insertar:
+```html
+<meta property="og:title" content="Los Contactos de Mamá - Directorio Familiar en Querétaro">
+<meta property="og:description" content="Encuentra negocios confiables para mamás en Querétaro. ¡Anúnciate gratis durante nuestra fase beta!">
+<meta property="og:image" content="https://loscontactosdemama.com.mx/img/og-image.jpg">
+<meta property="og:url" content="https://loscontactosdemama.com.mx">
+<meta property="og:type" content="website">
+```
+
+### 🎯 ¿Por qué y para qué?
+- Mejora cómo se ve tu sitio cuando se comparte en Facebook, WhatsApp, etc.
+- Aumenta el CTR (click-through rate) desde redes sociales.
+
+---
+
+## 🧠 Paso 5: Favicon
+📍 **Ubicación:** Dentro de `<head>`, justo antes del `<link>` de Font Awesome
+
+### 🔧 Código a insertar:
+```html
+<link rel="icon" href="https://loscontactosdemama.com.mx/favicon.ico" type="image/x-icon">
+```
+
+### 🎯 ¿Por qué y para qué?
+- Refuerza tu marca visual en pestañas del navegador.
+- Mejora la experiencia del usuario.
+
+---
+
+## 🧠 Paso 6: CTA y Formulario en el `<body>`
+📍 **Ubicación:** Justo antes del footer, donde aparece “© 2025 Los Contactos de Mamá…”
+
+### 🔧 Código a insertar:
+```html
+<section id="cta-anuncio" style="text-align:center; padding:20px;">
+  <h2>¿Tienes un negocio local?</h2>
+  <p>¡Anúnciate gratis durante nuestra fase beta y llega a cientos de familias en Querétaro!</p>
+  <a href="https://wa.me/5214426399446?text=Hola,%20quiero%20anunciar%20mi%20negocio%20en%20Los%20Contactos%20de%20Mamá" target="_blank" style="background:#ff4081; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">Anúnciate por WhatsApp</a>
+</section>
+
+<section id="form-leads" style="padding:20px; background:#f9f9f9;">
+  <h3>¿Quieres aparecer en nuestro directorio?</h3>
+  <form action="mailto:info@loscontactosdemama.com.mx" method="post" enctype="text/plain">
+    <input type="text" name="Nombre del negocio" placeholder="Nombre del negocio" required><br><br>
+    <input type="text" name="Categoría" placeholder="Categoría (Ej. Pastelería, Escuela)" required><br><br>
+    <input type="tel" name="Teléfono" placeholder="Teléfono / WhatsApp" required><br><br>
+    <textarea name="Descripción" placeholder="Breve descripción del negocio" rows="4"></textarea><br><br>
+    <input type="submit" value="Enviar" style="background:#4CAF50; color:white; padding:10px 20px;">
+  </form>
+</section>
+```
+
+### 🎯 ¿Por qué y para qué?
+- Mejora la conversión de visitantes en leads.
+- Refuerza el SEO con contenido relevante y dinámico.
+
+---
+
+## 🧠 Paso 7: Google Analytics
+📍 **Ubicación:** Justo antes de `</body>`
+
+### 🔧 Código a insertar:
+```html
+<script async src="https://www.googletagmanager.com/gtag/js?id=TU_ID_DE_ANALYTICS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'TU_ID_DE_ANALYTICS');
+</script>
+```
+
+### 🎯 ¿Por qué y para qué?
+- Te permite medir tráfico, clics, comportamiento de usuarios.
+- Es clave para validar tu MVP y tomar decisiones.
+
+---
+
+¿Quieres que te ayude a insertar esto directamente en tu archivo o revisar si hay conflictos con tu CSS o estructura? También puedo ayudarte a generar contenido SEO para cada categoría. ¿Qué parte quieres atacar ahora?
+
+
+
+
+## 🧠 ¿Qué es Schema.org y por qué usarlo?
+
+- Es un formato de datos estructurados en JSON-LD que ayuda a los motores de búsqueda a entender el contenido de tu sitio.
+- En tu caso, como es un **directorio de negocios locales**, puedes usar el tipo `LocalBusiness`.
+- Esto puede mejorar tu visibilidad en Google con **resultados enriquecidos** (como tarjetas con dirección, teléfono, etc.).
+
+---
+
+## 🧩 ¿Dónde insertarlo?
+
+📍 **Ubicación exacta:** Dentro del `<head>` de tu `index.html`, justo antes de `<style>` o después de tus `<meta>` tags.
+
+---
+
+## 🔧 Código que debes insertar
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Los Contactos de Mamá",
+  "url": "https://loscontactosdemama.com.mx",
+  "telephone": "+52 442 1697170",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Querétaro",
+    "addressRegion": "QRO",
+    "addressCountry": "MX"
+  },
+  "description": "Directorio confiable de negocios locales para mamás en Querétaro. Encuentra escuelas, médicos, eventos y más."
+}
+</script>
+```
+
+---
+
+## ✅ ¿Qué beneficios te da?
+
+- Mejora tu posicionamiento en búsquedas locales.
+- Permite que Google muestre tu sitio con información adicional (como teléfono, ubicación).
+- Refuerza tu autoridad como fuente confiable.
+
+---
+
+¿Quieres que te ayude a generar versiones específicas para cada categoría (como Escuelas, Nutrición, Eventos)? También podemos crear un `schema` para cada negocio que se anuncie. ¿Te gustaría eso?

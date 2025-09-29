@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Contactos de Mamá - Escuela</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+    --primary: #8db600;
+    --secondary: #dc143c;
+    --accent: #ff8800;
+    --white: #ffffff;
+    --dark: #2c3e50;
+    --text: #34495e;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+    --btn-prioridad: #dc143c;
+    --btn-prioridad-hover: #ff8800;
+    --btn-intermedio: #ff8800;
+    --btn-intermedio-hover: #8db600;
+    --btn-basico: #8db600;
+    --btn-basico-hover: #dc143c;
+}
+
+/* Reset y Body */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:var(--text); }
+
+/* Header */
+header { background: var(--primary); color: var(--white); padding:1rem 2rem; box-shadow: var(--shadow); position: sticky; top:0; z-index:1000; }
+.header-container { max-width: 1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+.logo { font-size:1.8rem; font-weight:bold; color:var(--white); text-decoration:none; }
+.nav { display:flex; list-style:none; gap:1rem; }
+.nav a { color: var(--white); text-decoration:none; font-weight:500; transition: var(--transition); }
+.nav a:hover { color: var(--accent); }
+.nav-toggle { display:none; background:none; border:none; font-size:1.5rem; cursor:pointer; color:var(--white); }
+
+/* Banner principal */
+.banner-main {
+    width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+}
+.banner-main img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Contenedor principal */
+.main-container { display:flex; flex-direction: column; max-width: 1200px; margin: 2rem auto; gap: 2rem; }
+.central-section { display:grid; gap:1.5rem; }
+
+/* Grid de cards */
+.anuncio-grid { display:grid; gap:1rem; }
+.anuncio-prioridad { grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); }
+.anuncio-intermedio { grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); }
+.anuncio-basico { grid-template-columns: repeat(3,1fr); gap:1rem; }
+
+/* =====================
+   Flip Card (Prioridad)
+   ===================== */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  height: 250px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius:10px;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+}
+.flip-card-front { background:var(--white); }
+.flip-card-front img {
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:0.5rem;
+}
+.flip-card-back {
+  background: var(--primary);
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* =====================
+   Tarjeta Intermedio (adaptativa, imagen 50% altura)
+   ===================== */
+.card-intermedio {
+  display: flex;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  transition: var(--transition);
+  height: 250px; /* altura fija */
+}
+
+.card-intermedio:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Imagen ocupa 25% del ancho y 50% de altura */
+.card-intermedio img {
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+  align-self: flex-start; /* se queda en la parte superior */
+}
+
+/* Contenedor de texto ocupa el resto */
+.card-intermedio .info {
+  padding: 1rem;
+  flex: 1; /* ocupa todo el espacio restante horizontal */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* distribuye título, descripción y botón verticalmente */
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* Título adaptable */
+.card-intermedio .info h4 {
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Descripción adaptable */
+.card-intermedio .info p {
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  flex: 1; /* crece para ocupar espacio libre vertical */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+/* Botón adaptable */
+.card-intermedio .info a {
+  font-size: clamp(0.65rem, 1vw, 0.85rem);
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+  color: #fff;
+  background: var(--btn-intermedio);
+  transition: all 0.3s ease;
+}
+
+.card-intermedio .info a:hover {
+  background: var(--btn-intermedio-hover);
+  transform: scale(1.05);
+}
+
+
+/* =====================
+   Tarjeta Básico
+   ===================== */
+.card-basico {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 150px; /* menos alta */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+}
+.card-basico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+/* =====================
+   Texto (común a todas)
+   ===================== */
+.card-title,
+.card-basico .card-title,
+.card-intermedio .card-title,
+.flip-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;      /* No saltar de línea */
+  overflow: hidden;         /* Ocultar exceso */
+  text-overflow: ellipsis;  /* Añadir "..." */
+}
+
+.card-description,
+.card-basico .card-description,
+.card-intermedio .card-description,
+.flip-card .card-description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-height: 3.8em;        /* Limitar a 2-3 líneas */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;    /* Número de líneas */
+  -webkit-box-orient: vertical;
+}
+
+
+
+/* Botones */
+.btn { display:inline-block; padding:0.75rem 1.5rem; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold; transition:all 0.3s ease; }
+.btn.prioridad { background: var(--btn-prioridad); }
+.btn.prioridad:hover { background: var(--btn-prioridad-hover); transform: scale(1.05); }
+.btn.intermedio { background: var(--btn-intermedio); }
+.btn.intermedio:hover { background: var(--btn-intermedio-hover); transform: scale(1.05); }
+.btn.basico { background: var(--btn-basico); }
+.btn.basico:hover { background: var(--btn-basico-hover); transform: scale(1.05); }
+
+
+/* =====================
+   Tarjeta Banner
+   ===================== */
+.card-banner {
+  display: flex;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  transition: var(--transition);
+  height: 125px; /* altura de la mitad de la card intermedia */
+  width: 50%;
+}
+
+.card-banner img {
+  width: 25%;      /* o ajusta según prefieras */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.card-banner .info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.card-banner .info h4 {
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-banner .info p {
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card-banner .info a {
+  font-size: clamp(0.65rem, 0.9vw, 0.85rem);
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+  color: #fff;
+  background: var(--btn-intermedio);
+  transition: all 0.3s ease;
+}
+
+.card-banner .info a:hover {
+  background: var(--btn-intermedio-hover);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer { background:var(--dark); color: var(--white); padding:3rem 1rem; margin-top:2rem; }
+.footer-container { max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:2rem; justify-content:space-between; }
+.footer-column { flex:1 1 200px; }
+
+/* WhatsApp */
+.whatsapp-btn { position: fixed; bottom:20px; right:20px; background:#25d366; color:#fff; padding:0.75rem 1rem; border-radius:50px; display:flex; align-items:center; gap:0.5rem; font-weight:bold; text-decoration:none; box-shadow:var(--shadow); z-index:1000; }
+
+/* Responsive */
+@media(max-width:1024px){ .anuncio-intermedio{ grid-template-columns:1fr; } }
+@media(max-width:600px){ .anuncio-prioridad,.anuncio-basico{ grid-template-columns:1fr; } }
+@media(max-width:768px){ .nav{ display:none; flex-direction:column; width:100%; margin-top:1rem; background: var(--primary); padding:1rem; border-radius:8px;} .nav.active{ display:flex;} .nav-toggle{ display:block;} }
+</style>
+</head>
+<body>
+
+<header>
+<div class="header-container">
+<a href="escuelas.html" class="logo">Los Contactos de Mamá ❤</a>
+<button class="nav-toggle" onclick="document.querySelector('.nav').classList.toggle('active')">☰</button>
+<ul class="nav">
+<li><a href="escuelas.html">Escuela, Institutos & Cursos</a></li>
+<li><a href="salud.html">Nutrición, Salud & Deporte</a></li>
+<li><a href="fiestas.html">Fiestas, Eventos & Convivios</a></li>
+<li><a href="hogar.html">Reparaciones del Hogar</a></li>
+<li><a href="familia.html">Family Friendly & Tiempo Libre</a></li>
+<li><a href="finanzas.html">Finanzas, Legal & Asociaciones</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+</header>
+
+<!-- Banner principal arriba
+<div class="banner-main">
+  <img src="https://via.placeholder.com/1200x250?text=Banner+Principal" alt="Banner Principal">
+</div>
+-->
+
+
+<!-- Contenedor principal de anunciantes -->
+<div class="main-container">
+  <div class="central-section" id="anuncios-container">
+<div class="anuncio-grid anuncio-prioridad">
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela1.png" alt="Colegio Gran Bretaña">
+      <h4>Colegio Gran Bretaña</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Colegio Gran Bretaña</h4>
+      <p>Preescolar y Primaria</p>
+      <p>Contacto: info@escuelaA.com</p>
+      <a href="escuelaA.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela2.png" alt="Escuela B">
+      <h4>Escuela B</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Escuela B</h4>
+      <p>Secundaria y Bachillerato</p>
+      <p>Contacto: contacto@escuelaB.com</p>
+      <a href="escuelaB.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela1.png" alt="Colegio Gran Bretaña">
+      <h4>Colegio Gran Bretaña</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Colegio Gran Bretaña</h4>
+      <p>Preescolar y Primaria</p>
+      <p>Contacto: info@escuelaA.com</p>
+      <a href="escuelaA.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela2.png" alt="Escuela B">
+      <h4>Escuela B</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Escuela B</h4>
+      <p>Secundaria y Bachillerato</p>
+      <p>Contacto: contacto@escuelaB.com</p>
+      <a href="escuelaB.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela1.png" alt="Colegio Gran Bretaña">
+      <h4>Colegio Gran Bretaña</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Colegio Gran Bretaña</h4>
+      <p>Preescolar y Primaria</p>
+      <p>Contacto: info@escuelaA.com</p>
+      <a href="escuelaA.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela2.png" alt="Escuela B">
+      <h4>Escuela B</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Escuela B</h4>
+      <p>Secundaria y Bachillerato</p>
+      <p>Contacto: contacto@escuelaB.com</p>
+      <a href="escuelaB.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela1.png" alt="Colegio Gran Bretaña">
+      <h4>Colegio Gran Bretaña</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Colegio Gran Bretaña</h4>
+      <p>Preescolar y Primaria</p>
+      <p>Contacto: info@escuelaA.com</p>
+      <a href="escuelaA.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela2.png" alt="Escuela B">
+      <h4>Escuela B</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Escuela B</h4>
+      <p>Secundaria y Bachillerato</p>
+      <p>Contacto: contacto@escuelaB.com</p>
+      <a href="escuelaB.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="anuncio-grid anuncio-intermedio">
+
+<div class="card-intermedio">
+  <img src="colegio1.png" alt="Escuela C">
+  <div class="info">
+    <h4>Escuela C</h4>
+    <p>Talleres de Arte</p>
+    <p>Contacto: gilbertomorelos@hotmail.com | 4421697170</p>
+    <a href="escuelaC.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="escuela4.png" alt="Escuela D">
+  <div class="info">
+    <h4>Escuela D</h4>
+    <p>Clases de Música</p>
+    <p>Contacto: contacto@escuelaD.com</p>
+    <a href="escuelaD.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="colegio1.png" alt="Escuela C">
+  <div class="info">
+    <h4>Escuela C</h4>
+    <p>Talleres de Arte</p>
+    <p>Contacto: hola@escuelaC.com</p>
+    <a href="escuelaC.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="escuela4.png" alt="Escuela D">
+  <div class="info">
+    <h4>Escuela D</h4>
+    <p>Clases de Música</p>
+    <p>Contacto: contacto@escuelaD.com</p>
+    <a href="escuelaD.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="colegio1.png" alt="Escuela C">
+  <div class="info">
+    <h4>Escuela C</h4>
+    <p>Talleres de Arte</p>
+    <p>Contacto: gilbertomorelos@hotmail.com | 4421697170</p>
+    <a href="escuelaC.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="escuela4.png" alt="Escuela D">
+  <div class="info">
+    <h4>Escuela D</h4>
+    <p>Clases de Música</p>
+    <p>Contacto: contacto@escuelaD.com</p>
+    <a href="escuelaD.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="colegio1.png" alt="Escuela C">
+  <div class="info">
+    <h4>Escuela C</h4>
+    <p>Talleres de Arte</p>
+    <p>Contacto: hola@escuelaC.com</p>
+    <a href="escuelaC.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="escuela4.png" alt="Escuela D">
+  <div class="info">
+    <h4>Escuela D</h4>
+    <p>Clases de Música</p>
+    <p>Contacto: contacto@escuelaD.com</p>
+    <a href="escuelaD.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+</div>
+<div class="anuncio-grid anuncio-basico">
+
+<div class="card-basico">
+  <h4>Escuela E</h4>
+  <p>Apoyo Escolar</p>
+  <p>Contacto: info@escuelaE.com</p>
+  <a href="escuelaE.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela F</h4>
+  <p>Taller de Ciencia</p>
+  <p>Contacto: contacto@escuelaF.com</p>
+  <a href="escuelaF.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela E</h4>
+  <p>Apoyo Escolar</p>
+  <p>Contacto: info@escuelaE.com</p>
+  <a href="escuelaE.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela F</h4>
+  <p>Taller de Ciencia</p>
+  <p>Contacto: contacto@escuelaF.com</p>
+  <a href="escuelaF.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela E</h4>
+  <p>Apoyo Escolar</p>
+  <p>Contacto: info@escuelaE.com</p>
+  <a href="escuelaE.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela F</h4>
+  <p>Taller de Ciencia</p>
+  <p>Contacto: contacto@escuelaF.com</p>
+  <a href="escuelaF.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela E</h4>
+  <p>Apoyo Escolar</p>
+  <p>Contacto: info@escuelaE.com</p>
+  <a href="escuelaE.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela F</h4>
+  <p>Taller de Ciencia</p>
+  <p>Contacto: contacto@escuelaF.com</p>
+  <a href="escuelaF.html" class="btn basico">Más Información</a>
+</div>
+</div>
+
+  </div>
+</div>
+
+<!-- Banners finales abajo -->
+<!-- Banner principal arriba -->
+<div class="banner-main">
+  <img src="https://via.placeholder.com/1200x250?text=Banner+Principal" alt="Banner Principal">
+</div>
+
+<!-- Contenedor de banners secundarios -->
+<div class="banners-container">
+  <div class="card-banner">
+    <img src="banner1.png" alt="Banner A">
+    <div class="info">
+      <h4>Banner A</h4>
+      <p>Descripción breve del banner.</p>
+      <a href="#">Más Información</a>
+    </div>
+  </div>
+  <div class="card-banner">
+    <img src="https://via.placeholder.com/300x125?text=Banner+2" alt="Banner 2">
+    <div class="info">
+      <h4>Banner 2</h4>
+      <p>Descripción breve del banner.</p>
+      <a href="#">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<!-- Contenedor principal de anunciantes -->
+<div class="main-container">
+  <div class="central-section" id="anuncios-container">
+<div class="anuncio-grid anuncio-prioridad">
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela1.png" alt="Colegio Gran Bretaña">
+      <h4>Colegio Gran Bretaña</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Colegio Gran Bretaña</h4>
+      <p>Preescolar y Primaria</p>
+      <p>Contacto: info@escuelaA.com</p>
+      <a href="escuelaA.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela2.png" alt="Escuela B">
+      <h4>Escuela B</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Escuela B</h4>
+      <p>Secundaria y Bachillerato</p>
+      <p>Contacto: contacto@escuelaB.com</p>
+      <a href="escuelaB.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela1.png" alt="Colegio Gran Bretaña">
+      <h4>Colegio Gran Bretaña</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Colegio Gran Bretaña</h4>
+      <p>Preescolar y Primaria</p>
+      <p>Contacto: info@escuelaA.com</p>
+      <a href="escuelaA.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela2.png" alt="Escuela B">
+      <h4>Escuela B</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Escuela B</h4>
+      <p>Secundaria y Bachillerato</p>
+      <p>Contacto: contacto@escuelaB.com</p>
+      <a href="escuelaB.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela1.png" alt="Colegio Gran Bretaña">
+      <h4>Colegio Gran Bretaña</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Colegio Gran Bretaña</h4>
+      <p>Preescolar y Primaria</p>
+      <p>Contacto: info@escuelaA.com</p>
+      <a href="escuelaA.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela2.png" alt="Escuela B">
+      <h4>Escuela B</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Escuela B</h4>
+      <p>Secundaria y Bachillerato</p>
+      <p>Contacto: contacto@escuelaB.com</p>
+      <a href="escuelaB.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela1.png" alt="Colegio Gran Bretaña">
+      <h4>Colegio Gran Bretaña</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Colegio Gran Bretaña</h4>
+      <p>Preescolar y Primaria</p>
+      <p>Contacto: info@escuelaA.com</p>
+      <a href="escuelaA.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="escuela2.png" alt="Escuela B">
+      <h4>Escuela B</h4>
+    </div>
+    <div class="flip-card-back">
+      <h4>Escuela B</h4>
+      <p>Secundaria y Bachillerato</p>
+      <p>Contacto: contacto@escuelaB.com</p>
+      <a href="escuelaB.html" class="btn prioridad">Más Información</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="anuncio-grid anuncio-intermedio">
+
+<div class="card-intermedio">
+  <img src="colegio1.png" alt="Escuela C">
+  <div class="info">
+    <h4>Escuela C</h4>
+    <p>Talleres de Arte</p>
+    <p>Contacto: gilbertomorelos@hotmail.com | 4421697170</p>
+    <a href="escuelaC.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="escuela4.png" alt="Escuela D">
+  <div class="info">
+    <h4>Escuela D</h4>
+    <p>Clases de Música</p>
+    <p>Contacto: contacto@escuelaD.com</p>
+    <a href="escuelaD.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="colegio1.png" alt="Escuela C">
+  <div class="info">
+    <h4>Escuela C</h4>
+    <p>Talleres de Arte</p>
+    <p>Contacto: hola@escuelaC.com</p>
+    <a href="escuelaC.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="escuela4.png" alt="Escuela D">
+  <div class="info">
+    <h4>Escuela D</h4>
+    <p>Clases de Música</p>
+    <p>Contacto: contacto@escuelaD.com</p>
+    <a href="escuelaD.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="colegio1.png" alt="Escuela C">
+  <div class="info">
+    <h4>Escuela C</h4>
+    <p>Talleres de Arte</p>
+    <p>Contacto: gilbertomorelos@hotmail.com | 4421697170</p>
+    <a href="escuelaC.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="escuela4.png" alt="Escuela D">
+  <div class="info">
+    <h4>Escuela D</h4>
+    <p>Clases de Música</p>
+    <p>Contacto: contacto@escuelaD.com</p>
+    <a href="escuelaD.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="colegio1.png" alt="Escuela C">
+  <div class="info">
+    <h4>Escuela C</h4>
+    <p>Talleres de Arte</p>
+    <p>Contacto: hola@escuelaC.com</p>
+    <a href="escuelaC.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+
+<div class="card-intermedio">
+  <img src="escuela4.png" alt="Escuela D">
+  <div class="info">
+    <h4>Escuela D</h4>
+    <p>Clases de Música</p>
+    <p>Contacto: contacto@escuelaD.com</p>
+    <a href="escuelaD.html" class="btn intermedio">Más Información</a>
+  </div>
+</div>
+</div>
+<div class="anuncio-grid anuncio-basico">
+
+<div class="card-basico">
+  <h4>Escuela E</h4>
+  <p>Apoyo Escolar</p>
+  <p>Contacto: info@escuelaE.com</p>
+  <a href="escuelaE.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela F</h4>
+  <p>Taller de Ciencia</p>
+  <p>Contacto: contacto@escuelaF.com</p>
+  <a href="escuelaF.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela E</h4>
+  <p>Apoyo Escolar</p>
+  <p>Contacto: info@escuelaE.com</p>
+  <a href="escuelaE.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela F</h4>
+  <p>Taller de Ciencia</p>
+  <p>Contacto: contacto@escuelaF.com</p>
+  <a href="escuelaF.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela E</h4>
+  <p>Apoyo Escolar</p>
+  <p>Contacto: info@escuelaE.com</p>
+  <a href="escuelaE.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela F</h4>
+  <p>Taller de Ciencia</p>
+  <p>Contacto: contacto@escuelaF.com</p>
+  <a href="escuelaF.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela E</h4>
+  <p>Apoyo Escolar</p>
+  <p>Contacto: info@escuelaE.com</p>
+  <a href="escuelaE.html" class="btn basico">Más Información</a>
+</div>
+
+<div class="card-basico">
+  <h4>Escuela F</h4>
+  <p>Taller de Ciencia</p>
+  <p>Contacto: contacto@escuelaF.com</p>
+  <a href="escuelaF.html" class="btn basico">Más Información</a>
+</div>
+</div>
+
+  </div>
+</div>
+
+<footer>
+<div class="footer-container">
+<div class="footer-column">
+<h3>Los Contactos de Mamá</h3>
+<p>Contacto: info@loscontactosdemama.com</p>
+<p>Tel: +521 442 1697170</p>
+</div>
+<div class="footer-column">
+<h3>Servicios</h3>
+<ul>
+<li>Anuncios en Web Page</li>
+<li>Lead Generating</li>
+<li>Emailing Campaign</li>
+<li>Ux/Ui Design</li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Horario</h3>
+<ul>
+<li>Lunes a Viernes: 11:00 - 18:00</li>
+<li>Sábados: Cerrado</li>
+<li>Domingos: Cerrado</li>
+</ul>
+</div>
+</div>
+</footer>
+
+<a href="https://wa.me/5214421697170" class="whatsapp-btn">
+<i class="fab fa-whatsapp"></i> WhatsApp Anúnciate!
+</a>
+
+<script>
+fetch('anunciantes.json')
+.then(res => res.json())
+.then(data => {
+  const contenedor = document.getElementById("anuncios-container");
+
+  // Sección Prioridad (Flip cards)
+  const prioridad = document.createElement('div');
+  prioridad.className = 'anuncio-grid anuncio-prioridad';
+  data.filter(a => a.categoria === 'prioridad').forEach(a => {
+    const card = document.createElement('div');
+    card.className = 'flip-card';
+    card.innerHTML = `
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="${a.imagen}" alt="${a.nombre}">
+          <h4>${a.nombre}</h4>
+        </div>
+        <div class="flip-card-back">
+          <h4>${a.nombre}</h4>
+          <p>${a.descripcion}</p>
+          <p>Contacto: ${a.contacto}</p>
+          <a href="${a.enlace}" class="btn prioridad">Más Información</a>
+        </div>
+      </div>
+    `;
+    prioridad.appendChild(card);
+  });
+  contenedor.appendChild(prioridad);
+
+  // Sección Intermedio (mitad imagen / mitad info)
+  const intermedio = document.createElement('div');
+  intermedio.className = 'anuncio-grid anuncio-intermedio';
+  data.filter(a => a.categoria === 'intermedio').forEach(a => {
+    const card = document.createElement('div');
+    card.className = 'card-intermedio';
+    card.innerHTML = `
+      <img src="${a.imagen}" alt="${a.nombre}">
+      <div class="info">
+        <h4>${a.nombre}</h4>
+        <p>${a.descripcion}</p>
+        <p>Contacto: ${a.contacto}</p>
+        <a href="${a.enlace}" class="btn intermedio">Más Información</a>
+      </div>
+    `;
+    intermedio.appendChild(card);
+  });
+  contenedor.appendChild(intermedio);
+
+  // Sección Básico (solo texto)
+  const basico = document.createElement('div');
+  basico.className = 'anuncio-grid anuncio-basico';
+  data.filter(a => a.categoria === 'basico').forEach(a => {
+    const card = document.createElement('div');
+    card.className = 'card-basico';
+    card.innerHTML = `
+      <h4>${a.nombre}</h4>
+      <p>${a.descripcion}</p>
+      <p>Contacto: ${a.contacto}</p>
+      <a href="${a.enlace}" class="btn basico">Más Información</a>
+    `;
+    basico.appendChild(card);
+  });
+  contenedor.appendChild(basico);
+
+})
+.catch(err => console.error('Error al cargar los anunciantes:', err));
+</script>
+
+</body>
+</html>
+

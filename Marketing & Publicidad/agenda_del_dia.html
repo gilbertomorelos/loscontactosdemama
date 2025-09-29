@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Diario – Los Contactos de Mamá</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #ff6f61; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        input[type="checkbox"] { transform: scale(1.2); margin-right: 5px; }
+        .block-title { background-color: #ffe6e0; padding: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>Plan Diario – Los Contactos de Mamá</h1>
+<p>Responsable: <strong>Gilberto</strong></p>
+<p>Fecha: <input type="date"></p>
+
+<h2>Bloque 1 – Mañana / Mediodía: Captación y comunicación</h2>
+<table>
+    <tr>
+        <th>Hora</th>
+        <th>Tarea</th>
+        <th>Meta</th>
+        <th>Estado</th>
+        <th>Notas</th>
+    </tr>
+    <tr>
+        <td>08:00 – 09:00</td>
+        <td>Programar / publicar posts en FB, IG, TikTok</td>
+        <td>20 posts diarios</td>
+        <td><input type="checkbox"></td>
+        <td>Revisar engagement de ayer</td>
+    </tr>
+    <tr>
+        <td>09:00 – 09:30</td>
+        <td>Enviar emails a nuevos prospectos</td>
+        <td>10 emails diarios</td>
+        <td><input type="checkbox"></td>
+        <td>Registrar aperturas y respuestas</td>
+    </tr>
+    <tr>
+        <td>09:30 – 10:30</td>
+        <td>Mensajes WhatsApp a negocios</td>
+        <td>20 mensajes diarios</td>
+        <td><input type="checkbox"></td>
+        <td>Usar plantilla, registrar respuestas</td>
+    </tr>
+    <tr>
+        <td>10:30 – 13:00</td>
+        <td>Visitas presenciales a negocios</td>
+        <td>5 negocios diarios</td>
+        <td><input type="checkbox"></td>
+        <td>Llevar PDF/flyer, registrar contacto</td>
+    </tr>
+    <tr>
+        <td>13:00 – 13:30</td>
+        <td>Pausa / revisión de seguimiento</td>
+        <td>-</td>
+        <td><input type="checkbox"></td>
+        <td>Actualizar Google Sheet o CRM</td>
+    </tr>
+</table>
+
+<h2>Bloque 2 – Tarde / Noche: Desarrollo y creatividad</h2>
+<table>
+    <tr>
+        <th>Hora</th>
+        <th>Tarea</th>
+        <th>Meta</th>
+        <th>Estado</th>
+        <th>Notas</th>
+    </tr>
+    <tr>
+        <td>16:00 – 17:30</td>
+        <td>Revisar / correr script de scraping</td>
+        <td>Avance de datos diarios</td>
+        <td><input type="checkbox"></td>
+        <td>Registrar errores / ajustes</td>
+    </tr>
+    <tr>
+        <td>17:30 – 19:00</td>
+        <td>Diseños de posts, flyers y PDFs</td>
+        <td>Material listo para mañana</td>
+        <td><input type="checkbox"></td>
+        <td>Exportar en PNG / PDF</td>
+    </tr>
+    <tr>
+        <td>19:00 – 19:30</td>
+        <td>Revisar resultados del día</td>
+        <td>Actualizar checklist y registro</td>
+        <td><input type="checkbox"></td>
+        <td>Registrar formularios completados y leads</td>
+    </tr>
+</table>
+
+<h2>Resumen Diario</h2>
+<ul>
+    <li>Negocios contactados: <input type="number"></li>
+    <li>Formularios completados: <input type="number"></li>
+    <li>Posts publicados: <input type="number"></li>
+    <li>Prospectos interesados: <input type="number"></li>
+    <li>Notas: <input type="text" style="width: 100%;"></li>
+</ul>
+
+<script>
+const planDiarioJSON = {
+  "responsable": "Gilberto",
+  "fecha": "",
+  "bloques": [
+    {
+      "nombre": "Mañana / Mediodía: Captación y comunicación",
+      "tareas": [
+        {"hora":"08:00 – 09:00","tarea":"Programar / publicar posts en FB, IG, TikTok","meta":"20 posts diarios","estado":false,"notas":"Revisar engagement de ayer"},
+        {"hora":"09:00 – 09:30","tarea":"Enviar emails a nuevos prospectos","meta":"10 emails diarios","estado":false,"notas":"Registrar aperturas y respuestas"},
+        {"hora":"09:30 – 10:30","tarea":"Mensajes WhatsApp a negocios","meta":"20 mensajes diarios","estado":false,"notas":"Usar plantilla, registrar respuestas"},
+        {"hora":"10:30 – 13:00","tarea":"Visitas presenciales a negocios","meta":"5 negocios diarios","estado":false,"notas":"Llevar PDF/flyer, registrar contacto"},
+        {"hora":"13:00 – 13:30","tarea":"Pausa / revisión de seguimiento","meta":"-","estado":false,"notas":"Actualizar Google Sheet o CRM"}
+      ]
+    },
+    {
+      "nombre": "Tarde / Noche: Desarrollo y creatividad",
+      "tareas": [
+        {"hora":"16:00 – 17:30","tarea":"Revisar / correr script de scraping","meta":"Avance de datos diarios","estado":false,"notas":"Registrar errores / ajustes"},
+        {"hora":"17:30 – 19:00","tarea":"Diseños de posts, flyers y PDFs","meta":"Material listo para mañana","estado":false,"notas":"Exportar en PNG / PDF"},
+        {"hora":"19:00 – 19:30","tarea":"Revisar resultados del día","meta":"Actualizar checklist y registro","estado":false,"notas":"Registrar formularios completados y leads"}
+      ]
+    }
+  ],
+  "resumen_diario":{
+    "negocios_contactados":0,
+    "formularios_completados":0,
+    "posts_publicados":0,
+    "prospectos_interesados":0,
+    "notas":""
+  }
+};
+
+console.log("Plan Diario JSON:", planDiarioJSON);
+</script>
+
+</body>
+</html>
+

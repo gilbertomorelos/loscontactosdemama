@@ -1,0 +1,217 @@
+<!--Template base -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Contactos de Mamá - Template Completo</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+    --primary: #8db600;
+    --secondary: #dc143c;
+    --accent: #ff8800;
+    --white: #ffffff;
+    --dark: #2c3e50;
+    --text: #34495e;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset básico */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background:#f4f4f4; color:var(--text); }
+
+/* Header */
+header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    position: sticky;
+    top:0;
+    z-index:1000;
+}
+.header-container { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; max-width:1200px; margin:0 auto; }
+.logo { font-size:1.8rem; font-weight:bold; color:var(--white); text-decoration:none; }
+.nav { display:flex; list-style:none; gap:1rem; }
+.nav a { color:var(--white); text-decoration:none; font-weight:500; transition:var(--transition); }
+.nav a:hover { color:var(--accent); }
+.nav-toggle { display:none; font-size:1.5rem; cursor:pointer; background:none; border:none; color:var(--white); }
+@media(max-width:768px){
+    .nav { display:none; flex-direction:column; width:100%; margin-top:1rem; background:var(--primary); padding:1rem; border-radius:8px; }
+    .nav.active { display:flex; }
+    .nav-toggle { display:block; }
+}
+
+/* Contenedor principal */
+.main-container { display:flex; max-width:1200px; margin:2rem auto; gap:1rem; }
+
+/* Secciones de anunciantes */
+.central-section { flex:3; display:grid; gap:2rem; }
+
+/* Sección 1 - Flip Cards */
+.flip-card-container { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:1rem; }
+.flip-card { background-color: transparent; perspective: 1000px; height:250px; }
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius:12px;
+}
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:1rem;
+    color:var(--white);
+}
+.flip-card-front { background: var(--primary); }
+.flip-card-front img { width:80px; height:80px; object-fit:cover; border-radius:50%; margin-bottom:0.5rem; transition: transform 0.3s; }
+.flip-card-front img:hover { transform: scale(1.2); }
+.flip-card-back { background: var(--secondary); transform: rotateY(180deg); }
+.flip-card-back a { color:var(--white); text-decoration:none; margin:0.3rem 0; }
+.flip-card-back a:hover { text-decoration:underline; }
+
+/* Sección 2 - Tarjetas color */
+.card-section2 { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:1rem; }
+.card-section2 .card { background: var(--accent); color: var(--white); padding:1rem; border-radius:12px; text-align:center; transition: transform 0.3s; cursor:pointer; }
+.card-section2 .card:hover { transform: scale(1.05); }
+
+/* Sección 3 - Tarjetas B/N */
+.card-section3 { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:1rem; }
+.card-section3 .card { background: #fff; color:#000; padding:1rem; border-radius:12px; text-align:center; border:1px solid #ccc; }
+
+/* Sidebar */
+.sidebar { flex:1; display:flex; flex-direction:column; gap:1rem; }
+.sidebar .banner { width:100%; border-radius:12px; overflow:hidden; position:relative; height:250px; }
+.sidebar .banner video, .sidebar .banner img { width:100%; height:100%; object-fit:cover; }
+
+/* Footer */
+footer { background: var(--dark); color: var(--white); padding:2rem 1rem; text-align:center; }
+footer a { color: var(--accent); text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+
+/* WhatsApp flotante */
+.whatsapp-btn { position:fixed; bottom:20px; right:20px; background:#25d366; color:#fff; padding:0.75rem 1rem; border-radius:50px; display:flex; align-items:center; gap:0.5rem; font-weight:bold; text-decoration:none; box-shadow:var(--shadow); z-index:1000; }
+
+/* Responsive */
+@media(max-width:1024px){ .main-container{flex-direction:column;} }
+@media(max-width:600px){ .flip-card-container,.card-section2,.card-section3{grid-template-columns:1fr;} .sidebar{flex-direction:row;overflow-x:auto;} .sidebar .banner{min-width:200px;} }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="../index.html" class="logo">Los Contactos de Mamá</a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav').classList.toggle('active')">☰</button>
+        <ul class="nav">
+            <li><a href="escuela.html">Escuela</a></li>
+            <li><a href="nutricion.html">Nutrición</a></li>
+            <li><a href="fiestas.html">Fiestas</a></li>
+            <li><a href="hogar.html">Hogar</a></li>
+            <li><a href="family.html">Family Friendly</a></li>
+            <li><a href="finanzas.html">Finanzas</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="main-container">
+
+    <!-- Sección central -->
+    <div class="central-section">
+
+        <!-- Sección 1 - Flip Cards -->
+        <h2>Sección 1 - Premium</h2>
+        <div class="flip-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/logo1.png" alt="Logo Empresa 1">
+                        <h3>Empresa 1</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="https://empresa1.com" target="_blank">🌐 Sitio Web</a>
+                        <a href="https://wa.me/521123456789?text=Hola" target="_blank">📲 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../assets/img/logo2.png" alt="Logo Empresa 2">
+                        <h3>Empresa 2</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="https://empresa2.com" target="_blank">🌐 Sitio Web</a>
+                        <a href="https://wa.me/521987654321?text=Hola" target="_blank">📲 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Agregar más flip-cards según sea necesario -->
+        </div>
+
+        <!-- Sección 2 - Tarjetas Color -->
+        <h2>Sección 2 - Anunciantes Color</h2>
+        <div class="card-section2">
+            <div class="card">Empresa 3<br>📲 WhatsApp</div>
+            <div class="card">Empresa 4<br>📲 WhatsApp</div>
+            <div class="card">Empresa 5<br>📲 WhatsApp</div>
+            <div class="card">Empresa 6<br>📲 WhatsApp</div>
+            <div class="card">Empresa 7<br>📲 WhatsApp</div>
+            <div class="card">Empresa 8<br>📲 WhatsApp</div>
+        </div>
+
+        <!-- Sección 3 - Tarjetas Blanco y Negro -->
+        <h2>Sección 3 - Anunciantes B/N</h2>
+        <div class="card-section3">
+            <div class="card">Empresa 9</div>
+            <div class="card">Empresa 10</div>
+            <div class="card">Empresa 11</div>
+            <div class="card">Empresa 12</div>
+            <div class="card">Empresa 13</div>
+            <div class="card">Empresa 14</div>
+        </div>
+
+    </div>
+
+    <!-- Sidebar banners -->
+    <div class="sidebar">
+        <div class="banner">
+            <video autoplay muted loop>
+                <source src="../assets/video/banner1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="banner">
+            <video autoplay muted loop>
+                <source src="../assets/video/banner2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Los Contactos de Mamá | <a href="../privacidad.html">Política de Privacidad</a></p>
+    <p><a href="../index.html">⬅ Regresar al inicio</a></p>
+</footer>
+
+<a href="https://wa.me/5214421697170" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i> WhatsApp Anúnciate!
+</a>
+
+</body>
+</html>

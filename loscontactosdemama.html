@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Contactos de Mamá</title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables CSS */
+        :root {
+            --primary: #ffb6c1;
+            --secondary: #dc143c;
+            --accent: #ff8800;
+            --light: #ff8800;
+            --dark: #2c3e50;
+            --text: #34495e;
+            --white: #ffffff;
+            --gray: #95a5a6;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset y base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--blue);
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--secondary); }
+
+        .nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
+        .nav { display: flex; list-style: none; gap: 2rem; }
+        .nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: var(--transition); }
+        .nav a:hover { color: var(--secondary); }
+
+
+        .sub-logo {
+        display: block;
+        font-size: 0.8rem;
+        color: #e74c3c;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        }
+
+
+
+        /* Hero Section */
+        .hero {
+            background: url("foto1.png") no-repeat center center/cover;
+            color: var(--white);
+            padding: 4rem 1rem;
+            text-align: center;
+            min-height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content { max-width: 800px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--secondary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: var(--transition);
+            font-weight: bold;
+        }
+
+        .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+        /* Eventos destacados */
+        .featured-events { padding: 4rem 1rem; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: var(--primary); }
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .event-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .event-card:hover { transform: translateY(-5px); }
+
+        .event-image {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Overlay con título y categoría */
+        .event-text, .event-title-overlay {
+            position: absolute;
+            left: 10px;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: rgba(0,0,0,0.5);
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .event-text { bottom: 40px; font-size: 1rem; }
+        .event-title-overlay { bottom: 10px; font-size: 1.2rem; }
+
+        .event-content {
+            padding: 1.5rem;
+            background: var(--white);
+        }
+
+        .event-date { color: var(--secondary); font-weight: bold; margin-bottom: 0.5rem; }
+        .event-title { font-size: 1.3rem; margin-bottom: 1rem; color: var(--primary); }
+
+        /* Footer y categorías se mantienen igual */
+        /* ... (omitir para simplificar, puedes copiar tu CSS existente de categorías y footer) ... */
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-toggle { display: block; }
+            .nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); box-shadow: var(--shadow); padding: 1rem; }
+            .nav.active { display: flex; }
+            .hero h1 { font-size: 2.5rem; }
+            .events-grid { grid-template-columns: 1fr; }
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                Los Contactos de Mamá ❤ <br>
+                <span class="sub-logo">Querétaro - San Juan del Río</span>
+            </a>
+
+           <ul class="nav">
+                <li><a href="escuelas.html">Escuela, Institutos & Cursos</a></li>
+                <li><a href="salud.html">Nutrición, Salud & Deporte</a></li>
+                <li><a href="eventos.html">Fiestas, Eventos y Convivios</a></li>
+                <li><a href="hogar.html">Reparaciones del Hogar</a></li>
+                <li><a href="familia.html">Family Friendly & Tiempo Libre</a></li>
+                <li><a href="finanzas.html">Finanzas, Legal & Asociaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mamá - Siempre Puede -</h1>
+            <p>Con los Contactos de Mamá , ella resuelve todo en su día a día.</p>
+            <a href="#eventos" class="btn">Promocion de la Semana</a>
+        </div>
+    </section>
+
+    <!-- Eventos -->
+    <section class="featured-events" id="eventos">
+        <h2 class="section-title"></h2>
+        <div class="events-grid">
+            <!-- Tarjeta 1 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="back_school.png" alt="Escuelas ">
+                    <div class="event-text">Escuelas , Institutos & Cursos</div>
+                    <div class="event-title-overlay"></div>
+                </div>
+                <div class="event-content">
+                    <div class="event-date">Escuelas , Institutos & Cursos</div>
+                    <p>Conoce todas las Escuelas , sus ofertas educativas asi como  cursos academicos
+                        de regularizacion , capacitación y talleres para mamas y niños .</p>
+                    <a href="#" class="btn">Más Información</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="futbol.png" alt="Nutrición">
+                    <div class="event-text">Nutricion , Salud & Deporte</div>
+                    <div class="event-title-overlay"></div>
+                </div>
+                <div class="event-content">
+                    <div class="event-date">Actividades Deportivas , Nutrición , Salud</div>
+                    <p>Médicos, Nutriologos , Spas, Beauty Centers , Deporte para niños como: futbol, basketball, natación, etc
+                        y para Mamá (Gimnasios, Defensa Personal, Functional Training)
+                         .</p>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="avion_juego.png" alt="Fiestas y Eventos">
+                    <div class="event-text">Fiestas , Eventos & Convivios</div>
+                    <div class="event-title-overlay"></div>
+                </div>
+                <div class="event-content">
+                    <div class="event-date">Fiestas , Eventos & Convivios</div>
+                    <p>Lo necesario para que Mamá arme la fiesta , un gran evento
+                        , el convivio escolar o lunch compartido.</p>
+                    <a href="#" class="btn">Más Información</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="home_improvement2.png" alt="Reparación del hogar">
+                    <div class="event-text">Reparaciones del Hogar</div>
+                    <div class="event-title-overlay"></div>
+                </div>
+                <div class="event-content">
+                    <div class="event-date">Reparaciones del hogar</div>
+                    <p>Servicios de plomeria, albañilería , carpintería, pintura , remodelación
+                        y lo necesario para que tu hogar este siempre en optimo estado.</p>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="travel.png" alt="Family Friendly">
+                    <div class="event-text">Family Friendly & Tiempo Libre</div>
+                    <div class="event-title-overlay"></div>
+                </div>
+                <div class="event-content">
+                    <div class="event-date">Family Friendly & Tiempo Libre</div>
+                    <p>Conoce los mejores lugares con ambiente famliar , pet friendly y ademas
+                    revisa los paquetes de las agencia de viajes , tours , todo para la familia !</p>
+
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="asistencia_legal.png" alt="Finanzas, Legal">
+                    <div class="event-text">Finanzas , Legal & Asociaciones</div>
+                    <div class="event-title-overlay"></div>
+                </div>
+                <div class="event-content">
+                    <div class="event-date">Finanzas Personales & Asistencia Legal</div>
+                    <p>Revisa y contrata a las mejores empresas financieras, aseguradoras , planes de retiro
+                        y ahorro , abogados , cuenta siempre con asistencia para tí y tu familia.</p>
+                    <a href="#" class="btn">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer y resto de secciones (categorías, contacto, WhatsApp, etc.) se mantienen igual -->
+<!-- Footer -->
+<footer style="background: var(--dark); color: var(--white); padding: 3rem 1rem;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+
+        <!-- Columna 1: Logo / Nombre -->
+        <div class="footer-column" style="flex: 1 1 200px;">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">Los Contactos de Mamá</h3>
+            <p>Los Contactos de Mamá.</p>
+            <p>Contacto.</p>
+            <p>Email. info@loscontactosdemama.com.mx
+               <p> Wapp. +521 442 1697170. Oficina
+                <p>Chatbot. +521 442 6399446  -😎</p>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-column" style="flex: 1 1 200px;">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">Servicios</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#servicios" style="color: var(--white); text-decoration: none;">Web & Landing Pages</a></li>
+                <li><a href="#servicios" style="color: var(--white); text-decoration: none;">Lead Generation</a></li>
+                <li><a href="#servicios" style="color: var(--white); text-decoration: none;">Emailing / SMS / Wapp</a></li>
+                <li><a href="#servicios" style="color: var(--white); text-decoration: none;">Ux / Ui Design</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Enlaces Rápidos -->
+        <div class="footer-column" style="flex: 1 1 200px;">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">Enlaces Rápidos</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#servicios" style="color: var(--white); text-decoration: none;">Servicios</a></li>
+                <li><a href="#galeria" style="color: var(--white); text-decoration: none;">Galería</a></li>
+                <li><a href="#testimonios" style="color: var(--white); text-decoration: none;">Testimonios</a></li>
+                <li><a href="#contacto" style="color: var(--white); text-decoration: none;">Contacto</a></li>
+                <li><a href="#" style="color: var(--white); text-decoration: none;">Política de Privacidad</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 4: Horario -->
+        <div class="footer-column" style="flex: 1 1 200px;">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">Horario de Atención</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>Lunes a Viernes: 11:00 AM - 6:00 PM ALL ON LINE / Chatbot</li>
+                <li>Sábados: Cerrado</li>
+                <li>Domingos: Cerrado</li>
+            </ul>
+        </div>
+    </div>
+
+            <!-- Columna 5: Quiero anunciarme ! -->
+        <div class="footer-column" style="flex: 1 1 200px; text-align: center;">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">Quiero Anunciarme</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li>Envianos un correo o whatsapp para atenderte</li>
+                <li>e incluirte a nuestra familia de Los Contactos de Mamá.</li>
+            </ul>
+        </div>
+
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5214421697170" style="position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; padding: 0.75rem 1rem; border-radius: 50px; display: flex; align-items: center; gap: 0.5rem; font-weight: bold; text-decoration: none; box-shadow: var(--shadow); z-index: 1000;">
+        <i class="fab fa-whatsapp"></i> WhatsApp Anunciate!
+    </a>
+
+    <!-- Derechos de autor -->
+    <div style="text-align: center; margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+        <p>&copy; 2025 Los Contactos de Mamá. Todos los derechos reservados.</p>
+        <p>Diseñado con ❤️ por Scrap Marketing IT442LAB</p>
+        <p>
+            <a href="https://wa.me/524421697170" target="_blank" style="color: var(--white); text-decoration: none;">
+                <i class="fab fa-whatsapp"></i> Contactar agencia de diseño
+            </a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+

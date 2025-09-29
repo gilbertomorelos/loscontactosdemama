@@ -1,0 +1,262 @@
+🎨 Lista de 40 colores
+Rojo brillante → #e74c3c
+Rojo vino → #8e2430
+Rosa pastel → #ffb6c1
+Rosa fucsia → #e84393
+Naranja intenso → #e67e22
+Naranja pastel → #ffb347
+Amarillo brillante → #f1c40f
+Amarillo dorado → #f39c12
+Amarillo pastel → #fffacd
+Verde esmeralda → #2ecc71
+Verde menta → #98ff98
+Verde lima → #cddc39
+Verde oscuro → #006400
+Turquesa → #1abc9c
+Agua marina → #7fffd4
+Cian brillante → #00ffff
+Azul cielo → #87ceeb
+Azul marino → #34495e
+Azul real → #4169e1
+Azul oscuro → #0a3d62
+Azul eléctrico → #2980b9
+Púrpura intenso → #8e44ad
+Lavanda → #b57edc
+Morado pastel → #d1b3ff
+Morado oscuro → #4b0082
+Beige → #f5f5dc
+Arena → #d2b48c
+Marrón chocolate → #7b3f00
+Café claro → #d7b899
+Gris claro → #bdc3c7
+Gris oscuro → #2c3e50
+Gris humo → #708090
+Negro carbón → #1c1c1c
+Blanco puro → #ffffff
+Blanco hueso → #f8f8ff
+Dorado metálico → #ffd700
+Cobre → #b87333
+Plateado → #c0c0c0
+Coral → #ff7f50
+Salmón → #fa8072
+Rosa chicle → #ff69b4
+Rosa mexicano → #e4007c
+Rosa Barbie → #da1884
+Rosa neón → #ff4f9a
+Rosa pastel claro → #ffe4e1
+Rosa viejo → #c08081
+Magenta → #ff00ff
+Fucsia intenso → #ff1493
+Fucsia oscuro → #ad1457
+Lila suave → #c8a2c8
+Lila pastel → #e6ccff
+Violeta claro → #ee82ee
+Lavanda claro → #e6e6fa
+Morado brillante → #9b59b6
+Uva → #6f2da8
+Amatista → #9966cc
+Orquídea → #da70d6
+Carmesí → #dc143c
+Rojo coral claro → #ff6f61
+Rojo pastel → #ff9999
+Durazno → #ffdab9
+Melón → #fdbcb4
+Mandarina → #ff8800
+Mostaza → #ffdb58
+Oro viejo → #b8860b
+Verde pistacho → #93c572
+Verde manzana → #8db600
+Verde jade → #00a86b
+Cian pastel → #b2ffff
+Turquesa pastel → #a0e7e5
+
+
+/* Variables CSS */
+:root {
+    --primary: #2c3e50;   /* Color principal (ej: encabezados, títulos, botones primarios) */
+    --secondary: #e74c3c; /* Color secundario (ej: acentos, hover en links, partes del logo) */
+    --accent: #3498db;    /* Color de acento (ej: fondos degradados, íconos de categoría) */
+    --light: #ecf0f1;     /* Color claro (fondos suaves, secciones claras) */
+    --dark: #2c3e50;      /* Color oscuro (footer, fondos oscuros) */
+    --text: #34495e;      /* Color del texto principal */
+    --white: #ffffff;     /* Blanco, usado en textos sobre fondos oscuros y tarjetas */
+    --gray: #95a5a6;      /* Gris, textos secundarios o elementos menos destacados */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra general */
+    --transition: all 0.3s ease; /* Transiciones */
+}
+
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text);       /* Color de texto principal */
+    background: var(--white); /* Fondo general */
+}
+
+/* Header y navegación */
+header {
+    background: var(--white); /* Fondo del header */
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    color: var(--primary);    /* Color principal del logo */
+}
+
+.logo span {
+    color: var(--secondary);  /* Color secundario en parte del logo */
+}
+
+.nav a {
+    color: var(--text);       /* Links normales */
+}
+
+.nav a:hover {
+    color: var(--secondary);  /* Links al pasar el mouse */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); /* Fondo degradado */
+    color: var(--white); /* Texto blanco en el hero */
+}
+
+.btn {
+    background: var(--secondary); /* Fondo del botón */
+    color: var(--white);          /* Texto del botón */
+}
+
+/* Eventos destacados */
+.section-title {
+    color: var(--primary); /* Título de la sección */
+}
+
+.event-image {
+    background: linear-gradient(45deg, var(--primary), var(--accent)); /* Fondo de la tarjeta */
+    color: var(--white); /* Texto dentro de la tarjeta */
+}
+
+.event-date {
+    color: var(--secondary); /* Fecha en color destacado */
+}
+
+.event-title {
+    color: var(--primary);   /* Título de evento */
+}
+
+/* Categorías */
+.categories {
+    background: var(--light); /* Fondo claro para categorías */
+}
+
+.category-icon {
+    color: var(--accent); /* Icono de categoría */
+}
+
+/* Footer */
+footer {
+    background: var(--dark); /* Fondo oscuro del footer */
+    color: var(--white);     /* Texto en blanco */
+}
+
+.footer-section h3 {
+    color: var(--secondary); /* Subtítulos en el footer */
+}
+
+.footer-links a {
+    color: var(--light);     /* Links claros en el footer */
+}
+
+.footer-links a:hover {
+    color: var(--secondary); /* Links hover en footer */
+}
+
+.social-links a {
+    color: var(--white);     /* Íconos sociales */
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+}
+
+.social-links a:hover {
+    background: var(--secondary); /* Hover en redes sociales */
+}
+
+/* Botón de WhatsApp fijo */
+.whatsapp-float {
+    background-color: #25d366; /* Verde de WhatsApp */
+    color: #FFF;               /* Ícono en blanco */
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E; /* Hover de WhatsApp */
+}
+
+/* Botón de WhatsApp en el footer */
+.whatsapp-footer {
+    background: #25d366; /* Verde de WhatsApp */
+    color: white;
+}
+
+.whatsapp-footer:hover {
+    background: #128C7E; /* Hover de WhatsApp */
+}
+
+***************************************
+propuestas CSS
+Frescura y Naturaleza
+
+:root {
+    --primary: #8DB600;   /* Verde lima brillante para encabezados y botones */
+    --secondary: #FF6F61; /* Coral para acentos y hover */
+    --accent: #FFD700;    /* Amarillo para íconos y banners */
+    --light: #F4F9F4;     /* Fondo claro, suave y limpio */
+    --dark: #2C3E50;      /* Footer y textos destacados oscuros */
+    --text: #34495E;      /* Texto principal */
+    --white: #FFFFFF;     /* Para textos sobre fondos oscuros */
+    --gray: #95A5A6;      /* Textos secundarios */
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+
+
+**************************
+energia y diversion
+
+:root {
+    --primary: #FF6B6B;   /* Rojo coral vibrante para títulos y botones */
+    --secondary: #4ECDC4; /* Turquesa para acentos y hover */
+    --accent: #FFE66D;    /* Amarillo brillante para detalles y banners */
+    --light: #FFF8F0;     /* Fondo cálido y suave */
+    --dark: #1A1A2E;      /* Para footer y contraste fuerte */
+    --text: #2E4057;      /* Texto principal legible */
+    --white: #FFFFFF;
+    --gray: #BDC3C7;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+
+
+******************************
+calido y amigable
+
+:root {
+    --primary: #FF9F1C;   /* Naranja cálido para títulos y botones */
+    --secondary: #2EC4B6; /* Verde-azul para acentos y hover */
+    --accent: #E71D36;    /* Rojo suave para detalles llamativos */
+    --light: #FFF1E6;     /* Fondo muy suave y limpio */
+    --dark: #011627;      /* Footer y textos destacados oscuros */
+    --text: #333333;      /* Texto principal legible */
+    --white: #FFFFFF;
+    --gray: #A0A0A0;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+

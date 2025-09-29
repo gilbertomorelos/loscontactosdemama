@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan Semanal – Los Contactos de Mamá</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  h1, h2 { color: #ff6f61; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+  th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+  th { background-color: #f2f2f2; }
+  input[type="checkbox"] { transform: scale(1.2); margin-right: 5px; }
+  textarea { width: 100%; height: 40px; }
+  button { background-color: #ff6f61; color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<h1>Plan Semanal – Los Contactos de Mamá</h1>
+<p>Responsable: <strong>Gilberto</strong></p>
+<p>Semana: <input type="week" id="semanaInput"></p>
+
+<div id="container"></div>
+
+<button onclick="guardarJSON()">Guardar Avance</button>
+
+<script>
+const diasSemana = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+const tareasBase = [
+  {"hora":"08:00–09:00","tarea":"Programar / publicar posts FB, IG, TikTok","meta":"20 posts","estado":false,"comentarios":""},
+  {"hora":"09:00–09:30","tarea":"Enviar emails a nuevos prospectos","meta":"10 emails","estado":false,"comentarios":""},
+  {"hora":"09:30–10:30","tarea":"Mensajes WhatsApp a negocios","meta":"20 mensajes","estado":false,"comentarios":""},
+  {"hora":"10:30–13:00","tarea":"Visitas presenciales a negocios","meta":"5 visitas","estado":false,"comentarios":""},
+  {"hora":"13:00–13:30","tarea":"Pausa / revisión de seguimiento","meta":"-","estado":false,"comentarios":""},
+  {"hora":"16:00–17:30","tarea":"Revisar / correr script de scraping","meta":"Avance de datos diarios","estado":false,"comentarios":""},
+  {"hora":"17:30–19:00","tarea":"Diseños de posts, flyers y PDFs","meta":"Material listo","estado":false,"comentarios":""},
+  {"hora":"19:00–19:30","tarea":"Revisar resultados del día","meta":"Actualizar checklist","estado":false,"comentarios":""}
+];
+
+// Crear estructura de la semana
+const planSemanal = diasSemana.map(dia => ({
+  nombre: dia,
+  tareas: JSON.parse(JSON.stringify(tareasBase)),
+  resumen_diario: {negocios_contactados:0, formularios_completados:0, posts_publicados:0, prospectos_interesados:0, comentarios:""}
+}));
+
+const container = document.getElementById("container");
+
+planSemanal.forEach((dia, diaIdx) => {
+  const h2 = document.createElement("h2");
+  h2.textContent = dia.nombre;
+  container.appendChild(h2);
+
+  const table = document.createElement("table");
+  const thead = document.createElement("thead");
+  thead.innerHTML = "<tr><th>Hora</th><th>Tarea</th><th>Meta</th><th>Hecho</th><th>Comentarios</th></tr>";
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+
+  dia.tareas.forEach((tarea, tareaIdx) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${tarea.hora}</td>
+      <td>${tarea.tarea}</td>
+      <td>${tarea.meta}</td>
+      <td><input type="checkbox" id="chk_${diaIdx}_${tareaIdx}" ${tarea.estado ? "checked" : ""}></td>
+      <td><textarea id="txt_${diaIdx}_${tareaIdx}">${tarea.comentarios}</textarea></td>
+    `;
+    tbody.appendChild(tr);
+
+    // Eventos para actualizar planSemanal al cambiar checkbox o textarea
+    tr.querySelector(`#chk_${diaIdx}_${tareaIdx}`).addEventListener("change", e => {
+      planSemanal[diaIdx].tareas[tareaIdx].estado = e.target.checked;
+    });
+    tr.querySelector(`#txt_${diaIdx}_${tareaIdx}`).addEventListener("input", e => {
+      planSemanal[diaIdx].tareas[tareaIdx].comentarios = e.target.value;
+    });
+  });
+
+  table.appendChild(tbody);
+  container.appendChild(table);
+
+  // Resumen diario
+  const resumenDiv = document.createElement("div");
+  resumenDiv.innerHTML = `
+    <p><strong>Resumen diario:</strong></p>
+    <ul>
+      <li>Negocios contactados: <input type="number" id="negocios_${diaIdx}" value="${dia.resumen_diario.negocios_contactados}"></li>
+      <li>Formularios completados: <input type="number" id="formularios_${diaIdx}" value="${dia.resumen_diario.formularios_completados}"></li>
+      <li>Posts publicados: <input type="number" id="posts_${diaIdx}" value="${dia.resumen_diario.posts_publicados}"></li>
+      <li>Prospectos interesados: <input type="number" id="prospectos_${diaIdx}" value="${dia.resumen_diario.prospectos_interesados}"></li>
+      <li>Comentarios: <textarea id="comentarios_${diaIdx}">${dia.resumen_diario.comentarios}</textarea></li>
+    </ul>
+  `;
+  container.appendChild(resumenDiv);
+
+  // Eventos para actualizar resumen diario
+  ["negocios","formularios","posts","prospectos","comentarios"].forEach(field=>{
+    const el = document.getElementById(`${field}_${diaIdx}`);
+    el.addEventListener("input", e => {
+      if(field === "comentarios") planSemanal[diaIdx].resumen_diario[field] = e.target.value;
+      else planSemanal[diaIdx].resumen_diario[field] = parseInt(e.target.value) || 0;
+    });
+  });
+});
+
+// Función para descargar JSON
+function guardarJSON() {
+  const semana = document.getElementById("semanaInput").value || "sin_fecha";
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(planSemanal, null, 2));
+  const downloadAnchorNode = document.createElement('a');
+  downloadAnchorNode.setAttribute("href", dataStr);
+  downloadAnchorNode.setAttribute("download", `plan_${semana}.json`);
+  document.body.appendChild(downloadAnchorNode);
+  downloadAnchorNode.click();
+  downloadAnchorNode.remove();
+}
+</script>
+
+</body>
+</html>
+

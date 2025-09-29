@@ -1,0 +1,251 @@
+🟢 Lado A: Usuarios finales
+👩‍👧 1. Mamá práctica
+
+Nombre: Mariana López
+Edad: 32 años
+Ubicación: Querétaro
+Estado civil: Casada, 2 hijos (6 y 9 años)
+Ocupación: Diseñadora freelance
+Objetivos:
+
+Encontrar rápidamente escuelas, pediatras y cursos confiables.
+
+Ahorrar tiempo y tener todo en un solo lugar.
+Frustraciones:
+
+Se pierde entre demasiada información en redes sociales.
+
+Duda de la confiabilidad de anuncios genéricos.
+Motivaciones:
+
+Seguridad y bienestar de sus hijos.
+
+Comunidad que comparte experiencias.
+Frase representativa: “Quiero encontrar lo mejor para mis hijos sin perder horas buscando.”
+
+👨‍👩‍👧‍👦 2. Papá saludable
+
+Nombre: Ricardo Hernández
+Edad: 35 años
+Ubicación: San Juan del Río
+Estado civil: Casado, 1 hijo de 8 años
+Ocupación: Ingeniero industrial
+Objetivos:
+
+Acceder a médicos, nutriólogos y actividades deportivas familiares.
+
+Mantener a su familia sana y activa.
+Frustraciones:
+
+No confía en anuncios de servicios médicos sin respaldo.
+
+Odia perder tiempo buscando y comparando.
+Motivaciones:
+
+Salud y bienestar integral.
+
+Opciones claras y seguras.
+Frase representativa: “Quiero servicios de salud confiables para mi familia sin complicaciones.”
+
+🎉 3. Organizadora de eventos
+
+Nombre: Paola Sánchez
+Edad: 28 años
+Ubicación: Querétaro
+Estado civil: Casada, 1 hija de 4 años
+Ocupación: Ama de casa, planea eventos escolares y familiares
+Objetivos:
+
+Encontrar salones, animadores y proveedores confiables para fiestas.
+
+Organizar eventos sin estrés y con calidad.
+Frustraciones:
+
+Le cuesta encontrar todo en un solo lugar.
+
+Se topa con proveedores informales.
+Motivaciones:
+
+Hacer feliz a su hija.
+
+Facilitar la logística de convivios escolares.
+Frase representativa: “Necesito todo lo de las fiestas en un solo sitio, sin perder tiempo.”
+
+👩‍💼 4. Jefa de familia
+
+Nombre: Claudia Méndez
+Edad: 40 años
+Ubicación: San Juan del Río
+Estado civil: Divorciada, 2 hijos adolescentes
+Ocupación: Administradora
+Objetivos:
+
+Acceder a seguros, abogados y asesorías financieras confiables.
+
+Tomar decisiones seguras para proteger a su familia.
+Frustraciones:
+
+Desconfía de trámites poco claros.
+
+Pierde tiempo buscando asesoría de calidad.
+Motivaciones:
+
+Seguridad económica y legal.
+
+Garantizar el futuro de sus hijos.
+Frase representativa: “Quiero asesoría clara y confiable para proteger a mi familia.”
+
+🌍 5. Exploradora familiar
+
+Nombre: Fernanda Torres
+Edad: 30 años
+Ubicación: Querétaro
+Estado civil: Casada, 1 hijo y 1 perro
+Ocupación: Community Manager
+Objetivos:
+
+Descubrir actividades, tours y lugares pet-friendly.
+
+Disfrutar de tiempo libre en familia.
+Frustraciones:
+
+No encuentra información confiable sobre lugares locales.
+
+No sabe si son realmente family/pet-friendly.
+Motivaciones:
+
+Pasar tiempo de calidad en familia.
+
+Encontrar lugares seguros y divertidos.
+Frase representativa: “Quiero planes familiares confiables y divertidos cerca de mí.”
+
+✅ Con esto tenemos los 5 perfiles de usuarios finales.
+¿Quieres que revisemos y ajustes alguno de estos antes de avanzar a los 5 perfiles de anunciantes (lado B)?
+
+Dijiste:
+dame los 10 juntos y ya de ahi vamos uno por uno
+ChatGPT dijo:
+
+Perfecto, Gilberto ✅, aquí tienes los 10 perfiles completos listos para revisar y ajustar uno por uno.
+
+🟢 Lado A: Usuarios finales
+1. Mamá práctica
+
+Nombre: Mariana López
+Edad: 32 años
+Ubicación: Querétaro
+Estado civil: Casada, 2 hijos (6 y 9 años)
+Ocupación: Diseñadora freelance
+Objetivos: Encontrar escuelas, pediatras y cursos confiables; ahorrar tiempo.
+Frustraciones: Información dispersa y poco confiable.
+Motivaciones: Seguridad y bienestar de sus hijos; comunidad confiable.
+Frase: “Quiero encontrar lo mejor para mis hijos sin perder horas buscando.”
+
+2. Papá saludable
+
+Nombre: Ricardo Hernández
+Edad: 35 años
+Ubicación: San Juan del Río
+Estado civil: Casado, 1 hijo de 8 años
+Ocupación: Ingeniero industrial
+Objetivos: Acceder a médicos, nutriólogos y actividades deportivas.
+Frustraciones: Falta de respaldo confiable en anuncios; perder tiempo comparando.
+Motivaciones: Salud y bienestar familiar.
+Frase: “Quiero servicios de salud confiables para mi familia sin complicaciones.”
+
+3. Organizadora de eventos
+
+Nombre: Paola Sánchez
+Edad: 28 años
+Ubicación: Querétaro
+Estado civil: Casada, 1 hija de 4 años
+Ocupación: Ama de casa / organizadora de eventos
+Objetivos: Encontrar salones, animadores y proveedores confiables para fiestas.
+Frustraciones: Falta de centralización de información; proveedores poco serios.
+Motivaciones: Hacer feliz a sus hijos; eventos sin estrés.
+Frase: “Necesito todo lo de las fiestas en un solo sitio, sin perder tiempo.”
+
+4. Jefa de familia
+
+Nombre: Claudia Méndez
+Edad: 40 años
+Ubicación: San Juan del Río
+Estado civil: Divorciada, 2 hijos adolescentes
+Ocupación: Administradora
+Objetivos: Acceder a seguros, abogados y asesorías financieras confiables.
+Frustraciones: Trámites poco claros; pérdida de tiempo.
+Motivaciones: Seguridad económica y legal; proteger a sus hijos.
+Frase: “Quiero asesoría clara y confiable para proteger a mi familia.”
+
+5. Exploradora familiar
+
+Nombre: Fernanda Torres
+Edad: 30 años
+Ubicación: Querétaro
+Estado civil: Casada, 1 hijo y 1 perro
+Ocupación: Community Manager
+Objetivos: Descubrir actividades, tours y lugares pet/family-friendly.
+Frustraciones: Información dispersa y poco confiable.
+Motivaciones: Pasar tiempo de calidad en familia; seguridad y diversión.
+Frase: “Quiero planes familiares confiables y divertidos cerca de mí.”
+
+🔵 Lado B: Anunciantes
+6. Emprendedora local
+
+Nombre: Laura Ramírez
+Edad: 38 años
+Ubicación: San Juan del Río
+Estado civil: Casada, 1 hijo adolescente
+Ocupación: Dueña de academia de danza
+Objetivos: Promocionar su negocio sin gastar mucho; llegar a mamás/papás.
+Frustraciones: Publicidad cara y poco efectiva; destacar entre la competencia.
+Motivaciones: Crecer su negocio; ser reconocida en la comunidad.
+Frase: “Necesito un lugar donde las mamás vean mi negocio y confíen en mí.”
+
+7. Negocio establecido
+
+Nombre: Jorge Méndez
+Edad: 45 años
+Ubicación: Querétaro
+Estado civil: Casado, 2 hijos
+Ocupación: Dueño de escuela privada / clínica
+Objetivos: Posicionarse como primera opción; captar clientes locales.
+Frustraciones: Canales digitales saturados o ineficientes; competencia fuerte.
+Motivaciones: Reconocimiento y crecimiento del negocio.
+Frase: “Quiero que mi negocio sea la primera opción para las familias locales.”
+
+8. Profesional independiente
+
+Nombre: Ana Castillo
+Edad: 33 años
+Ubicación: Querétaro
+Estado civil: Soltera
+Ocupación: Nutrióloga / Psicóloga / Abogada
+Objetivos: Conseguir clientes locales sin depender de terceros.
+Frustraciones: Difícil encontrar un canal confiable de promoción.
+Motivaciones: Crecer profesionalmente y generar confianza.
+Frase: “Quiero que mi servicio llegue a las familias correctas de manera confiable.”
+
+9. Proveedor de eventos
+
+Nombre: David Ortega
+Edad: 29 años
+Ubicación: San Juan del Río
+Estado civil: Soltero
+Ocupación: Banquetes / Animadores / Salones
+Objetivos: Aumentar clientes para eventos familiares.
+Frustraciones: Difícil conectar con familias confiables; competencia informal.
+Motivaciones: Crear relaciones estables con clientes; reputación.
+Frase: “Necesito llegar a familias que realmente valoren mis servicios.”
+
+10. Freelancer digital
+
+Nombre: Karla Jiménez
+Edad: 27 años
+Ubicación: Querétaro
+Estado civil: Soltera
+Ocupación: Diseñadora / Marketing / Talleres online
+Objetivos: Ofrecer servicios digitales y talleres a familias locales.
+Frustraciones: Difícil llegar a clientes locales con poca visibilidad.
+Motivaciones: Expandir su portafolio; generar ingresos recurrentes.
+Frase: “Quiero que mi trabajo digital llegue a familias que lo necesiten.”

@@ -1,0 +1,241 @@
+[
+  {
+    "nombre": "Colegio Gran Bretaña",
+    "descripcion": "Preescolar , Primaria , Secundaria , Preparatoria",
+    "imagen": "Fotos Anunciantes/gran_bretaña.jpeg",
+    "enlace": "escuelaA.html",
+    "contacto": "4422571110",
+    "ranking": "",
+    "categoria": "prioridad"
+  },
+
+ {
+    "nombre": "Colegio Bosques",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "Fotos Anunciantes/colegio_bosques.webp",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+
+ {
+    "nombre": "Prepa Tec de Monterrey",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "Fotos Anunciantes/prepa_tec.jpeg",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+
+  {
+    "nombre": "Colegio Salesiano",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "Fotos Anunciantes/salesiano.jpeg",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+{
+    "nombre": "Colegio del Tepeyac",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "Fotos Anunciantes/colegio_tepeyac.jpg",
+    "enlace": "escuelaB.html",
+    "contacto": "admisionesqro@\ntepeyacqueretaro.edu.mx",
+
+    "categoria": "prioridad"
+  },
+
+
+  {
+    "nombre": "Alquileres Monet",
+    "descripcion": "Alquiler de Equipo para Eventos",
+    "imagen": "Fotos Anunciantes/monet_lcm.jpg",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "ranking": "4.5 *",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "AIR GADGETS",
+    "descripcion": "Accesorios para Iphone",
+    "imagen": "Fotos Anunciantes/Air_gadgets.png",
+    "enlace": "escuelaC.html",
+    "contacto": "airgadgets69@gmail.com | 7718885106",
+    "ranking": "4.5 *",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela D",
+    "descripcion": "Clases de Música",
+    "imagen": "escuela4.png",
+    "enlace": "escuelaD.html",
+    "contacto": "contacto@escuelaD.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela E",
+    "descripcion": "Apoyo Escolar",
+    "imagen": "",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "basico"
+  },
+  {
+    "nombre": "Escuela F",
+    "descripcion": "Taller de Ciencia",
+    "imagen": "",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "basico"
+  },
+
+ {
+    "nombre": "Espacio Dispoible",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "Fotos  Anunciantes/colegio_bosuqes.webp",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Espacio Disponible",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "Fotos Anunciantes/anunciate_escuelas.png",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela C",
+    "descripcion": "Talleres de Arte",
+    "imagen": "colegio1.png",
+    "enlace": "escuelaC.html",
+    "contacto": "hola@escuelaC.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela D",
+    "descripcion": "Clases de Música",
+    "imagen": "escuela4.png",
+    "enlace": "escuelaD.html",
+    "contacto": "contacto@escuelaD.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela E",
+    "descripcion": "Apoyo Escolar",
+    "imagen": "",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "basico"
+  },
+  {
+    "nombre": "Escuela F",
+    "descripcion": "Taller de Ciencia",
+    "imagen": "",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "basico"
+  },
+
+{
+    "nombre": "Colegio Gran Bretaña",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "escuela1.png",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela B",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "escuela2.png",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela C",
+    "descripcion": "Talleres de Arte",
+    "imagen": "colegio1.png",
+    "enlace": "escuelaC.html",
+    "contacto": "gilbertomorelos@hotmail.com | 4421697170",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela D",
+    "descripcion": "Clases de Música",
+    "imagen": "escuela4.png",
+    "enlace": "escuelaD.html",
+    "contacto": "contacto@escuelaD.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela E",
+    "descripcion": "Apoyo Escolar",
+    "imagen": "",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "basico"
+  },
+  {
+    "nombre": "Escuela F",
+    "descripcion": "Taller de Ciencia",
+    "imagen": "",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "basico"
+  },
+
+ {
+    "nombre": "Colegio Gran Bretaña",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "escuela1.png",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela B",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "escuela2.png",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "categoria": "prioridad"
+  },
+  {
+    "nombre": "Escuela C",
+    "descripcion": "Talleres de Arte",
+    "imagen": "colegio1.png",
+    "enlace": "escuelaC.html",
+    "contacto": "hola@escuelaC.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela D",
+    "descripcion": "Clases de Música",
+    "imagen": "escuela4.png",
+    "enlace": "escuelaD.html",
+    "contacto": "contacto@escuelaD.com",
+    "categoria": "intermedio"
+  },
+  {
+    "nombre": "Escuela E",
+    "descripcion": "Apoyo Escolar",
+    "imagen": "",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "basico"
+  },
+  {
+    "nombre": "Escuela F",
+    "descripcion": "Taller de Ciencia",
+    "imagen": "",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "basico"
+  }
+
+
+
+]

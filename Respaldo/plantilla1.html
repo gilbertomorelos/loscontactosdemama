@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla Página - Categoría</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variables CSS */
+        :root {
+            --primary: #8db600;
+            --secondary: #dc143c;
+            --accent: #ff8800;
+            --white: #ffffff;
+            --dark: #2c3e50;
+            --text: #34495e;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text); line-height:1.6; background:#f5f5f5; }
+
+        /* Header */
+        header { background: var(--primary); padding:1rem 0; position: sticky; top:0; z-index:1000; box-shadow: var(--shadow);}
+        .header-container { max-width:1200px; margin:0 auto; padding:0 1rem; display:flex; justify-content:space-between; align-items:center; }
+        .logo { color: var(--white); font-size:1.8rem; font-weight:bold; text-decoration:none; }
+        .nav { display:flex; list-style:none; gap:1rem; }
+        .nav a { color: var(--white); text-decoration:none; font-weight:500; transition: var(--transition);}
+        .nav a:hover { color: var(--accent); }
+
+        /* Secciones centrales */
+        .section { max-width:1200px; margin:2rem auto; padding:1rem; display:grid; gap:1rem; }
+        .section h2 { margin-bottom:1rem; color: var(--primary); }
+        .anuncios-grid { display:grid; gap:1rem; }
+
+        /* Grids de anuncios por sección */
+        .grid-grande { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .grid-mediano { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+        .grid-pequeno { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+
+        .anuncio { background: var(--white); padding:1rem; border-radius:8px; box-shadow: var(--shadow); text-align:center; transition: var(--transition);}
+        .anuncio:hover { transform: translateY(-3px); }
+
+        /* Banners laterales */
+        .banners-container { position: relative; max-width:1200px; margin:2rem auto; display:flex; justify-content: flex-end; gap:1rem;}
+        .banner { background: var(--secondary); color: var(--white); padding:1rem; border-radius:8px; min-width:180px; text-align:center; position:relative;}
+        .banner-flotante { position: absolute; right:-200px; top:0; width:180px; background: var(--accent);}
+        .banner-flotante:nth-child(2) { top:200px; }
+        .banner-flotante:nth-child(3) { top:400px; }
+
+        /* Footer */
+        footer { background: var(--dark); color: var(--white); padding:2rem 1rem; text-align:center; margin-top:2rem; }
+
+        /* WhatsApp flotante */
+        .whatsapp { position: fixed; bottom:20px; right:20px; background:#25d366; color:#fff; padding:0.75rem 1rem; border-radius:50px; display:flex; align-items:center; gap:0.5rem; font-weight:bold; text-decoration:none; box-shadow:var(--shadow); z-index:1000; }
+
+        /* Responsive */
+        @media(max-width:768px){
+            .nav { flex-direction: column; gap:0.5rem; }
+            .banners-container { display:none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Los Contactos de Mamá</a>
+            <ul class="nav">
+                <li><a href="escuela.html">Escuela</a></li>
+                <li><a href="nutricion.html">Nutrición</a></li>
+                <li><a href="fiestas.html">Fiestas</a></li>
+                <li><a href="hogar.html">Hogar</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sección 1: Anuncios grandes -->
+    <section class="section">
+        <h2>Sección Principal - Premium</h2>
+        <div class="anuncios-grid grid-grande">
+            <div class="anuncio">Anunciante 1</div>
+            <div class="anuncio">Anunciante 2</div>
+            <div class="anuncio">Anunciante 3</div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Anuncios intermedios -->
+    <section class="section">
+        <h2>Sección Intermedia</h2>
+        <div class="anuncios-grid grid-mediano">
+            <div class="anuncio">Anunciante 4</div>
+            <div class="anuncio">Anunciante 5</div>
+            <div class="anuncio">Anunciante 6</div>
+            <div class="anuncio">Anunciante 7</div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Anuncios pequeños -->
+    <section class="section">
+        <h2>Sección Básica</h2>
+        <div class="anuncios-grid grid-pequeno">
+            <div class="anuncio">Anunciante 8</div>
+            <div class="anuncio">Anunciante 9</div>
+            <div class="anuncio">Anunciante 10</div>
+            <div class="anuncio">Anunciante 11</div>
+            <div class="anuncio">Anunciante 12</div>
+        </div>
+    </section>
+
+    <!-- Banners laterales -->
+    <div class="banners-container">
+        <div class="banner">Banner Fijo</div>
+        <div class="banner banner-flotante">Banner Flotante 1</div>
+        <div class="banner banner-flotante">Banner Flotante 2</div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Los Contactos de Mamá. Todos los derechos reservados.</p>
+        <p>Diseñado por Scrap Marketing IT442LAB</p>
+    </footer>
+
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/5214421697170" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</body>
+</html>

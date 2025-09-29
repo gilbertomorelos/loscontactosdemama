@@ -1,0 +1,111 @@
+{
+    "bundles": {
+        "basicos": [
+            {
+                "nombre": "Básico 1",
+                "incluye": [
+                    "Landing page sencilla",
+                    "Chatbot básico WhatsApp",
+                    "4 posts FB/IG",
+                    "1 flyer digital"
+                ],
+                "ideal_para": "Pequeños negocios que comienzan su presencia digital"
+            },
+            {
+                "nombre": "Básico 2",
+                "incluye": [
+                    "Landing page + formulario de contacto",
+                    "Chatbot básico con respuestas automáticas",
+                    "3 posts FB/IG",
+                    "Logo simple"
+                ],
+                "ideal_para": "Negocios que quieren validar presencia digital"
+            },
+            {
+                "nombre": "Básico 3",
+                "incluye": [
+                    "Landing page responsive",
+                    "Chatbot básico WhatsApp",
+                    "2 posts FB/IG",
+                    "1 banner digital"
+                ],
+                "ideal_para": "Emprendedores que buscan empezar rápido y bajo costo"
+            }
+        ],
+        "intermedios": [
+            {
+                "nombre": "Intermedio 1",
+                "incluye": [
+                    "Landing page profesional",
+                    "Chatbot con menús",
+                    "8 posts FB/IG/TikTok",
+                    "1 video corto tipo reel/TikTok",
+                    "Flyers digitales"
+                ],
+                "ideal_para": "Negocios que buscan crecer en redes sociales"
+            },
+            {
+                "nombre": "Intermedio 2",
+                "incluye": [
+                    "Landing page + dominio básico",
+                    "Chatbot con respuestas rápidas",
+                    "6 posts FB/IG",
+                    "2 videos cortos",
+                    "Flyers digitales + logo animado"
+                ],
+                "ideal_para": "Negocios que quieren mejorar branding y engagement"
+            },
+            {
+                "nombre": "Intermedio 3",
+                "incluye": [
+                    "Landing page optimizada SEO",
+                    "Chatbot con menús y respuestas automáticas",
+                    "8 posts + 1 reel/mes",
+                    "Video promocional corto",
+                    "Flyers digitales"
+                ],
+                "ideal_para": "Negocios que quieren más interacción y tráfico"
+            }
+        ],
+        "avanzados": [
+            {
+                "nombre": "Avanzado 1",
+                "incluye": [
+                    "Landing page optimizada con dominio propio",
+                    "Chatbot avanzado con menús",
+                    "12 posts + 2 reels/mes",
+                    "Campaña de anuncios FB/IG configurada",
+                    "Flyers impresos 1000 piezas",
+                    "Tarjetas de presentación físicas"
+                ],
+                "ideal_para": "Negocios que buscan presencia digital + física completa"
+            },
+            {
+                "nombre": "Avanzado 2",
+                "incluye": [
+                    "Landing page profesional con SEO y dominio",
+                    "Chatbot avanzado + integración CRM",
+                    "12 posts + 3 reels/mes",
+                    "Campaña de anuncios FB/IG/TikTok",
+                    "Flyers y material impreso premium",
+                    "Tarjetas de presentación",
+                    "Reporte mensual detallado"
+                ],
+                "ideal_para": "Negocios que quieren marketing integral digital y físico"
+            },
+            {
+                "nombre": "Avanzado 3",
+                "incluye": [
+                    "Landing page profesional con blog y dominio",
+                    "Chatbot avanzado + menús y respuestas personalizadas",
+                    "15 posts + 4 reels/mes",
+                    "Campaña de anuncios completa",
+                    "Flyers impresos + merch (bolsitas, camisetas)",
+                    "Tarjetas de presentación premium",
+                    "Reporte mensual + asesoría estratégica"
+                ],
+                "ideal_para": "Negocios que buscan un paquete completo de marketing y branding"
+            }
+        ]
+    }
+}

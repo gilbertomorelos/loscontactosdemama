@@ -1,0 +1,82 @@
+<svg width="800" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2f7" />
+      <stop offset="100%" stop-color="#f0f9eb" />
+    </linearGradient>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; fill: #2c5282; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 20px; fill: #4a5568; }
+      .benefit { font-family: Arial, sans-serif; font-size: 18px; fill: #2d3748; }
+      .cta { font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; fill: white; }
+      .icon { stroke: #2b6cb0; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Fondo con gradiente suave -->
+  <rect width="100%" height="100%" fill="url(#bgGradient)" />
+
+  <!-- Encabezado con título principal -->
+  <rect x="0" y="0" width="800" height="120" fill="#2b6cb0" />
+  <text x="400" y="70" class="title" text-anchor="middle" fill="white">TODO LO QUE NECESITAS PARA TUS HIJOS</text>
+  <text x="400" y="100" class="title" text-anchor="middle" fill="white">EN UN SOLO LUGAR Y CONFIABLE</text>
+
+  <!-- Ilustración de familia -->
+  <circle cx="400" cy="250" r="80" fill="#feb2b2" />
+  <circle cx="370" cy="230" r="15" fill="#fff" />
+  <circle cx="430" cy="230" r="15" fill="#fff" />
+  <path d="M380 280 Q400 300 420 280" stroke="#fff" stroke-width="2" fill="none" />
+
+  <!-- Iconos de beneficios -->
+  <g transform="translate(200, 350)">
+    <!-- Icono escuela -->
+    <rect x="0" y="0" width="80" height="80" rx="15" fill="#90cdf4" />
+    <path class="icon" d="M20 25 H60 M20 35 H60 M25 45 V60 M35 45 V55 M45 45 V60 M20 60 H60" />
+    <text x="40" y="100" class="subtitle" text-anchor="middle">Escuelas</text>
+  </g>
+
+  <g transform="translate(400, 350)">
+    <!-- Icono salud -->
+    <rect x="0" y="0" width="80" height="80" rx="15" fill="#9ae6b4" />
+    <path class="icon" d="M30 20 L50 40 M50 20 L30 40" />
+    <circle cx="40" cy="30" r="15" fill="none" class="icon" />
+    <text x="40" y="100" class="subtitle" text-anchor="middle">Salud</text>
+  </g>
+
+  <g transform="translate(600, 350)">
+    <!-- Icono comunidad -->
+    <rect x="0" y="0" width="80" height="80" rx="15" fill="#faf089" />
+    <circle cx="25" cy="30" r="10" class="icon" />
+    <circle cx="55" cy="30" r="10" class="icon" />
+    <path class="icon" d="M35 50 Q40 60 45 50" />
+    <text x="40" y="100" class="subtitle" text-anchor="middle">Comunidad</text>
+  </g>
+
+  <!-- Lista de beneficios -->
+  <g transform="translate(100, 450)">
+    <text x="0" y="0" class="benefit">✓ Encuentra escuelas, cursos y talleres confiables</text>
+    <text x="0" y="30" class="benefit">✓ Descubre pediatras y servicios de salud especializados</text>
+    <text x="0" y="60" class="benefit">✓ Ahorra tiempo con información verificada y recomendaciones reales</text>
+    <text x="0" y="90" class="benefit">✓ Conéctate con una comunidad de mamás como tú</text>
+  </g>
+
+  <!-- Sello de confianza -->
+  <circle cx="650" cy="500" r="50" fill="#f56565" stroke="#fff" stroke-width="3" />
+  <text x="650" cy="500" y="495" class="subtitle" text-anchor="middle" fill="white">VERIFICADO</text>
+
+  <!-- Botón CTA -->
+  <g id="ctaButton" transform="translate(300, 600)">
+    <rect x="0" y="0" width="200" height="60" rx="30" fill="#2b6cb0" />
+    <text x="100" y="35" class="cta" text-anchor="middle">Explora ahora</text>
+  </g>
+
+  <!-- Logo y eslogan final -->
+  <text x="400" y="750" class="title" text-anchor="middle" fill="#2c5282">Mamá Práctica</text>
+  <text x="400" y="790" class="subtitle" text-anchor="middle">Tu comunidad confiable de crianza</text>
+
+  <!-- Elementos decorativos -->
+  <circle cx="100" cy="800" r="15" fill="#feb2b2" opacity="0.6" />
+  <circle cx="700" cy="820" r="20" fill="#90cdf4" opacity="0.6" />
+  <circle cx="150" cy="900" r="12" fill="#9ae6b4" opacity="0.6" />
+  <circle cx="650" cy="880" r="18" fill="#faf089" opacity="0.6" />
+</svg>
