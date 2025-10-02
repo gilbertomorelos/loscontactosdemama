@@ -9,7 +9,7 @@
     "categoria": "prioridad"
   },
 
- {
+  {
     "nombre": "Colegio Bosques",
     "descripcion": "Preescolar y Primaria",
     "imagen": "Fotos Anunciantes/colegio_bosques.webp",
@@ -18,7 +18,7 @@
     "categoria": "prioridad"
   },
 
- {
+  {
     "nombre": "Prepa Tec de Monterrey",
     "descripcion": "Preescolar y Primaria",
     "imagen": "Fotos Anunciantes/prepa_tec.jpeg",
@@ -35,7 +35,8 @@
     "contacto": "info@escuelaA.com",
     "categoria": "prioridad"
   },
-{
+
+  {
     "nombre": "Colegio del Tepeyac",
     "descripcion": "Campus Querétaro",
     "imagen": "Fotos Anunciantes/colegio_tepeyac.jpg",
@@ -44,6 +45,68 @@
     "categoria": "prioridad"
   },
 
+  {
+    "nombre": "UNIVA",
+    "descripcion": "Universidad",
+    "imagen": "Fotos Anunciantes/univa.jpeg",
+    "enlace": "escuelaD.html",
+    "contacto": "contacto@escuelaD.com",
+    "categoria": "intermedio"
+  },
+
+  {
+    "nombre": "UNIVERSIDAD VIZCAYA DE LAS AMERICAS",
+    "descripcion": "Universidad",
+    "imagen": "Fotos Anunciantes/vizcaya.png",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "intermedio"
+  },
+
+  {
+    "nombre": "COLEGIO MARCELINA",
+    "descripcion": "Escuela Primaria",
+    "imagen": "Fotos Anunciantes/colegio_marcelina.png",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "Intermedio"
+  },
+
+  {
+    "nombre": "INSTITUTO THOMAS JEFFERSON",
+    "descripcion": "Preescolar y Primaria",
+    "imagen": "Fotos Anunciantes/thomas_jefferson.jpeg",
+    "enlace": "escuelaA.html",
+    "contacto": "info@escuelaA.com",
+    "categoria": "prioridad"
+  },
+
+  {
+    "nombre": "Espacio Disponible",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "Fotos Anunciantes/anunciate_escuelas.png",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "categoria": "prioridad"
+  },
+
+  {
+    "nombre": "Espacio Disponible",
+    "descripcion": "Apoyo Escolar",
+    "imagen": "",
+    "enlace": "escuelaE.html",
+    "contacto": "info@escuelaE.com",
+    "categoria": "basico"
+  },
+
+  {
+    "nombre": "Espacio Disponible",
+    "descripcion": "Taller de Ciencia",
+    "imagen": "",
+    "enlace": "escuelaF.html",
+    "contacto": "contacto@escuelaF.com",
+    "categoria": "basico"
+  },
 
   {
     "nombre": "Alquileres Monet",
@@ -54,6 +117,7 @@
     "ranking": "4.5 *",
     "categoria": "prioridad"
   },
+
   {
     "nombre": "AIR GADGETS",
     "descripcion": "Accesorios para Iphone",
@@ -63,122 +127,36 @@
     "ranking": "4.5 *",
     "categoria": "prioridad"
   },
-  {
-    "nombre": "Escuela D",
-    "descripcion": "Clases de Música",
-    "imagen": "escuela4.png",
-    "enlace": "escuelaD.html",
-    "contacto": "contacto@escuelaD.com",
-    "categoria": "intermedio"
-  },
-  {
-    "nombre": "Escuela E",
-    "descripcion": "Apoyo Escolar",
-    "imagen": "",
-    "enlace": "escuelaE.html",
-    "contacto": "info@escuelaE.com",
-    "categoria": "basico"
-  },
-  {
-    "nombre": "Escuela F",
-    "descripcion": "Taller de Ciencia",
-    "imagen": "",
-    "enlace": "escuelaF.html",
-    "contacto": "contacto@escuelaF.com",
-    "categoria": "basico"
-  },
 
- {
-    "nombre": "Espacio Dispoible",
-    "descripcion": "Preescolar y Primaria",
-    "imagen": "Fotos  Anunciantes/colegio_bosuqes.webp",
-    "enlace": "escuelaA.html",
-    "contacto": "info@escuelaA.com",
-    "categoria": "prioridad"
-  },
   {
     "nombre": "Espacio Disponible",
-    "descripcion": "Secundaria y Bachillerato",
-    "imagen": "Fotos Anunciantes/anunciate_escuelas.png",
-    "enlace": "escuelaB.html",
-    "contacto": "contacto@escuelaB.com",
-    "categoria": "prioridad"
-  },
-  {
-    "nombre": "Escuela C",
-    "descripcion": "Talleres de Arte",
-    "imagen": "colegio1.png",
-    "enlace": "escuelaC.html",
-    "contacto": "hola@escuelaC.com",
-    "categoria": "intermedio"
-  },
-  {
-    "nombre": "Escuela D",
-    "descripcion": "Clases de Música",
-    "imagen": "escuela4.png",
-    "enlace": "escuelaD.html",
-    "contacto": "contacto@escuelaD.com",
-    "categoria": "intermedio"
-  },
-  {
-    "nombre": "Escuela E",
-    "descripcion": "Apoyo Escolar",
-    "imagen": "",
-    "enlace": "escuelaE.html",
-    "contacto": "info@escuelaE.com",
-    "categoria": "basico"
-  },
-  {
-    "nombre": "Escuela F",
-    "descripcion": "Taller de Ciencia",
-    "imagen": "",
-    "enlace": "escuelaF.html",
-    "contacto": "contacto@escuelaF.com",
-    "categoria": "basico"
-  },
-
-{
-    "nombre": "Colegio Gran Bretaña",
-    "descripcion": "Preescolar y Primaria",
-    "imagen": "escuela1.png",
-    "enlace": "escuelaA.html",
-    "contacto": "info@escuelaA.com",
-    "categoria": "prioridad"
-  },
-  {
-    "nombre": "Escuela B",
-    "descripcion": "Secundaria y Bachillerato",
-    "imagen": "escuela2.png",
-    "enlace": "escuelaB.html",
-    "contacto": "contacto@escuelaB.com",
-    "categoria": "prioridad"
-  },
-  {
-    "nombre": "Escuela C",
     "descripcion": "Talleres de Arte",
     "imagen": "colegio1.png",
     "enlace": "escuelaC.html",
     "contacto": "gilbertomorelos@hotmail.com | 4421697170",
     "categoria": "intermedio"
   },
+
   {
-    "nombre": "Escuela D",
+    "nombre": "Colegio Internacional de Querétaro",
     "descripcion": "Clases de Música",
-    "imagen": "escuela4.png",
+    "imagen": "Fotos Anunciantes/colegio_internacional_queretaro.jpeg",
     "enlace": "escuelaD.html",
     "contacto": "contacto@escuelaD.com",
     "categoria": "intermedio"
   },
+
   {
-    "nombre": "Escuela E",
+    "nombre": "Espacio Disponible",
     "descripcion": "Apoyo Escolar",
     "imagen": "",
     "enlace": "escuelaE.html",
     "contacto": "info@escuelaE.com",
     "categoria": "basico"
   },
+
   {
-    "nombre": "Escuela F",
+    "nombre": "Espacio Disponible",
     "descripcion": "Taller de Ciencia",
     "imagen": "",
     "enlace": "escuelaF.html",
@@ -186,55 +164,40 @@
     "categoria": "basico"
   },
 
- {
-    "nombre": "Colegio Gran Bretaña",
+  {
+    "nombre": "Espacio Disponible",
     "descripcion": "Preescolar y Primaria",
     "imagen": "escuela1.png",
     "enlace": "escuelaA.html",
     "contacto": "info@escuelaA.com",
-    "categoria": "prioridad"
+    "categoria": "basico"
   },
+
   {
-    "nombre": "Escuela B",
+    "nombre": "Escuela Espacio Disponible",
     "descripcion": "Secundaria y Bachillerato",
     "imagen": "escuela2.png",
     "enlace": "escuelaB.html",
     "contacto": "contacto@escuelaB.com",
     "categoria": "prioridad"
   },
+
   {
-    "nombre": "Escuela C",
+    "nombre": "Escuela Espacio Disponible",
+    "descripcion": "Secundaria y Bachillerato",
+    "imagen": "escuela2.png",
+    "enlace": "escuelaB.html",
+    "contacto": "contacto@escuelaB.com",
+    "categoria": "basico"
+  },
+  
+  {
+    "nombre": "Espacio Disponible",
     "descripcion": "Talleres de Arte",
     "imagen": "colegio1.png",
     "enlace": "escuelaC.html",
     "contacto": "hola@escuelaC.com",
     "categoria": "intermedio"
-  },
-  {
-    "nombre": "Escuela D",
-    "descripcion": "Clases de Música",
-    "imagen": "escuela4.png",
-    "enlace": "escuelaD.html",
-    "contacto": "contacto@escuelaD.com",
-    "categoria": "intermedio"
-  },
-  {
-    "nombre": "Escuela E",
-    "descripcion": "Apoyo Escolar",
-    "imagen": "",
-    "enlace": "escuelaE.html",
-    "contacto": "info@escuelaE.com",
-    "categoria": "basico"
-  },
-  {
-    "nombre": "Escuela F",
-    "descripcion": "Taller de Ciencia",
-    "imagen": "",
-    "enlace": "escuelaF.html",
-    "contacto": "contacto@escuelaF.com",
-    "categoria": "basico"
   }
-
-
 
 ]
