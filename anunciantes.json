@@ -4,7 +4,7 @@
     "descripcion": "Preescolar , Primaria , Secundaria , Preparatoria",
     "imagen": "Fotos Anunciantes/gran_bretaña.jpeg",
     "enlace": "escuelaA.html",
-    "contacto": "info@escuelaA.com",
+    "contacto": "T: 442 257 1110",
     "ranking": "4.5 *",
     "categoria": "prioridad"
   },
@@ -13,17 +13,17 @@
     "nombre": "Colegio Bosques",
     "descripcion": "Preescolar y Primaria",
     "imagen": "Fotos Anunciantes/colegio_bosques.webp",
-    "enlace": "escuelaA.html",
-    "contacto": "info@escuelaA.com",
+    "enlace": "",
+    "contacto": "T: 442 2533297",
     "categoria": "prioridad"
   },
 
   {
     "nombre": "Prepa Tec de Monterrey",
-    "descripcion": "Preescolar y Primaria",
+    "descripcion": "Preparatoria",
     "imagen": "Fotos Anunciantes/prepa_tec.jpeg",
-    "enlace": "escuelaA.html",
-    "contacto": "info@escuelaA.com",
+    "enlace": "",
+    "contacto": "contacto pendiente",
     "categoria": "prioridad"
   },
 
@@ -31,8 +31,8 @@
     "nombre": "Colegio Salesiano",
     "descripcion": "Preescolar y Primaria",
     "imagen": "Fotos Anunciantes/salesiano.jpeg",
-    "enlace": "escuelaA.html",
-    "contacto": "info@escuelaA.com",
+    "enlace": "",
+    "contacto": "T: 442 384 6250",
     "categoria": "prioridad"
   },
 
@@ -50,7 +50,7 @@
     "descripcion": "Universidad",
     "imagen": "Fotos Anunciantes/univa.jpeg",
     "enlace": "escuelaD.html",
-    "contacto": "contacto@escuelaD.com",
+    "contacto": "contacto pendiente",
     "categoria": "intermedio"
   },
 
@@ -59,7 +59,7 @@
     "descripcion": "Universidad",
     "imagen": "Fotos Anunciantes/vizcaya.png",
     "enlace": "escuelaE.html",
-    "contacto": "info@escuelaE.com",
+    "contacto": "contacto pendiente",
     "categoria": "intermedio"
   },
 
@@ -68,8 +68,8 @@
     "descripcion": "Escuela Primaria",
     "imagen": "Fotos Anunciantes/colegio_marcelina.png",
     "enlace": "escuelaF.html",
-    "contacto": "contacto@escuelaF.com",
-    "categoria": "Intermedio"
+    "contacto": "contacto pendiente",
+    "categoria": "intermedio"
   },
 
   {
@@ -77,35 +77,35 @@
     "descripcion": "Preescolar y Primaria",
     "imagen": "Fotos Anunciantes/thomas_jefferson.jpeg",
     "enlace": "escuelaA.html",
-    "contacto": "info@escuelaA.com",
+    "contacto": "Contacto pendiente",
     "categoria": "prioridad"
   },
 
   {
-    "nombre": "Espacio Disponible",
-    "descripcion": "Secundaria y Bachillerato",
-    "imagen": "Fotos Anunciantes/anunciate_escuelas.png",
-    "enlace": "escuelaB.html",
-    "contacto": "contacto@escuelaB.com",
+    "nombre": "Colegio El Trébol",
+    "descripcion": "Pre escolar",
+    "imagen": "Fotos Anunciantes/el_trebol_colegio.jpg",
+    "enlace": "www.loscontactosdemama.com.mx",
+    "contacto": "T:442 248 4096",
     "categoria": "prioridad"
   },
 
   {
-    "nombre": "Espacio Disponible",
-    "descripcion": "Apoyo Escolar",
-    "imagen": "",
-    "enlace": "escuelaE.html",
-    "contacto": "info@escuelaE.com",
-    "categoria": "basico"
+    "nombre": "Electry Instalaciones",
+    "descripcion": "Instalaciones Electricas",
+    "imagen": "Fotos Anunciantes/electry_reparaciones.jpg",
+    "enlace": "",
+    "contacto": "T: 442 7388227",
+    "categoria": "intermedio"
   },
 
   {
-    "nombre": "Espacio Disponible",
-    "descripcion": "Taller de Ciencia",
-    "imagen": "",
-    "enlace": "escuelaF.html",
-    "contacto": "contacto@escuelaF.com",
-    "categoria": "basico"
+    "nombre": "Multiservicios Cerrajeria",
+    "descripcion": "Casa - Auto - Cajas Fuertes",
+    "imagen": "Fotos Anunciantes/multiservicios_cerrajeria.jpg",
+    "enlace": "",
+    "contacto": "T: 442 823 1798",
+    "categoria": "intermedio"
   },
 
   {
@@ -113,7 +113,7 @@
     "descripcion": "Alquiler de Equipo para Eventos",
     "imagen": "Fotos Anunciantes/monet_lcm.jpg",
     "enlace": "escuelaB.html",
-    "contacto": "contacto@escuelaB.com",
+    "contacto": "T: 442 358 6523",
     "ranking": "4.5 *",
     "categoria": "prioridad"
   },
@@ -142,7 +142,7 @@
     "descripcion": "Clases de Música",
     "imagen": "Fotos Anunciantes/colegio_internacional_queretaro.jpeg",
     "enlace": "escuelaD.html",
-    "contacto": "contacto@escuelaD.com",
+    "contacto": "contacto pendiente",
     "categoria": "intermedio"
   },
 
@@ -190,7 +190,7 @@
     "contacto": "contacto@escuelaB.com",
     "categoria": "basico"
   },
-  
+
   {
     "nombre": "Espacio Disponible",
     "descripcion": "Talleres de Arte",
