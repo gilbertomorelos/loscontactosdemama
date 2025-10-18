@@ -129,11 +129,11 @@
   },
 
   {
-    "nombre": "Espacio Disponible",
-    "descripcion": "Talleres de Arte",
-    "imagen": "colegio1.png",
-    "enlace": "escuelaC.html",
-    "contacto": "gilbertomorelos@hotmail.com | 4421697170",
+    "nombre": "REINDUMEX MANTENIMIENTO",
+    "descripcion": "Construcción y Mantenimiento",
+    "imagen": "reindumex.jpg",
+    "enlace": "reindumex.com",
+    "contacto": " 4424261689",
     "categoria": "intermedio"
   },
 
@@ -147,12 +147,12 @@
   },
 
   {
-    "nombre": "Espacio Disponible",
-    "descripcion": "Apoyo Escolar",
-    "imagen": "",
-    "enlace": "escuelaE.html",
-    "contacto": "info@escuelaE.com",
-    "categoria": "basico"
+    "nombre": "Terapia Holística",
+    "descripcion": "Terapias Física y Holísticas",
+    "imagen": "/Fotos Anunciantes/terapia_holistica.jpg",
+    "enlace": "",
+    "contacto": "442 119 9220",
+    "categoria": "intermedio"
   },
 
   {
@@ -201,5 +201,3 @@
   }
 
 ]
-
-
