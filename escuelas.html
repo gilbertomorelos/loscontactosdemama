@@ -353,7 +353,8 @@ footer { background:var(--dark); color: var(--white); padding:3rem 1rem; margin-
 @media(max-width:600px){ .anuncio-prioridad,.anuncio-basico{ grid-template-columns:1fr; } }
 @media(max-width:768px){ .nav{ display:none; flex-direction:column; width:100%; margin-top:1rem; background: var(--primary); padding:1rem; border-radius:8px;} .nav.active{ display:flex;} .nav-toggle{ display:block;} }
 </style>
-</head>
+
+
 <body>
 
 <header>
@@ -361,6 +362,7 @@ footer { background:var(--dark); color: var(--white); padding:3rem 1rem; margin-
 <a href="escuelas.html" class="logo">Los Contactos de Mamá ❤</a>
 <button class="nav-toggle" onclick="document.querySelector('.nav').classList.toggle('active')">☰</button>
 <ul class="nav">
+<li><a href="index.html">Inicio</a></li>
 <li><a href="escuelas.html">Escuela, Institutos & Cursos</a></li>
 <li><a href="salud.html">Nutrición, Salud & Deporte</a></li>
 <li><a href="fiestas.html">Fiestas, Eventos & Convivios</a></li>
@@ -422,6 +424,7 @@ footer { background:var(--dark); color: var(--white); padding:3rem 1rem; margin-
 </a>
 
 <script>
+
 fetch('anunciantes.json')
 .then(res => res.json())
 .then(data => {
@@ -488,8 +491,11 @@ fetch('anunciantes.json')
 
 })
 .catch(err => console.error('Error al cargar los anunciantes:', err));
+
 </script>
+</div>
 
 </body>
+
 </html>
 
