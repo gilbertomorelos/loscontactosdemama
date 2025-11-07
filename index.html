@@ -1,6 +1,6 @@
-<!-- index para dar termino y poder lanzar, se queda como respaldo final y se copia a index.html -->
+<!-- index para dar termino y poder lanzar, se queda como respaldo final y se copia a index_machote.html -->
 <!-- ultima actualizacion 11 sept 2025 : 11:08 am-->
-<!--respaldo de index.html-->
+<!--respaldo de index_machote.html-->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -633,19 +633,10 @@
     </div>
 </section>
 
-
 <!-- BLOG DE LA SEMANA -->
 <section id="blog-semana">
   <h2>📝 Blog de la Semana</h2>
-  <div class="blog-card">
-    <img id="blog-imagen" src="" alt="Imagen del blog" />
-    <h3 id="blog-titulo">Título del Blog</h3>
-    <p><strong>Autor:</strong> <span id="blog-autor">Nombre del autor</span></p>
-    <p><strong>Fecha:</strong> <span id="blog-fecha">dd/mm/aaaa</span></p>
-    <div id="blog-contenido">
-      Aquí aparecerá el contenido del blog semanal cargado dinámicamente desde JSON.
-    </div>
-  </div>
+  <div id="blog-container"></div>
 </section>
 
 <!-- ===== CSS DEL BLOG ===== -->
@@ -664,15 +655,16 @@
   margin-bottom: 20px;
 }
 
-.blog-card {
+.blog-post {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
   border: 2px solid #d63384;
   box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
 }
 
-.blog-card img {
+.blog-post img {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
@@ -680,12 +672,12 @@
   margin-bottom: 15px;
 }
 
-.blog-card h3 {
+.blog-post h2 {
   margin-bottom: 10px;
   color: #333;
 }
 
-.blog-card p {
+.blog-post p {
   margin: 6px 0;
   line-height: 1.6;
 }
@@ -694,31 +686,30 @@
 <!-- ===== JS DEL BLOG ===== -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const titulo = document.getElementById("blog-titulo");
-  const autor = document.getElementById("blog-autor");
-  const fecha = document.getElementById("blog-fecha");
-  const contenido = document.getElementById("blog-contenido");
-  const imagen = document.getElementById("blog-imagen");
+  const contenedor = document.getElementById("blog-container");
 
-  // Cargar JSON local
   fetch("blog.json")
     .then(response => response.json())
     .then(data => {
-      titulo.textContent = data.titulo;
-      autor.textContent = data.autor;
-      fecha.textContent = data.fecha;
-      contenido.innerHTML = data.contenido;
-      if (data.imagen) {
-        imagen.src = data.imagen;
-        imagen.style.display = "block";
-      } else {
-        imagen.style.display = "none";
-      }
+      contenedor.innerHTML = "";
+
+      data.forEach(post => {
+        const card = document.createElement("div");
+        card.classList.add("blog-post");
+
+        card.innerHTML = `
+          ${post.imagen ? `<img src="${post.imagen}" alt="${post.titulo}">` : ""}
+          <h2>${post.titulo}</h2>
+          <p><strong>${post.autor}</strong> | ${post.fecha}</p>
+          <div>${post.contenido}</div>
+        `;
+
+        contenedor.appendChild(card);
+      });
     })
     .catch(error => console.error("Error cargando el JSON del blog:", error));
 });
 </script>
-
 
 <!--SECCION PAQUETES / BUNDLES -->
 
@@ -785,7 +776,11 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="bundle-head">
           <h3 id="plan-visibilidad" class="bundle-title">Plan Visibilidad</h3>
           <div class="bundle-sub">Ideal para comenzar</div>
+
+            <span class="badge">Empieza en 2026</span>
+
         </div>
+
         <div class="bundle-body">
           <ul class="features">
             <li>Todo el Plan Free / Grátis</li>
@@ -809,6 +804,10 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="bundle-head">
           <h3 id="plan-impulso" class="bundle-title">Plan Impulso</h3>
           <div class="bundle-sub">Para quienes quieren destacar</div>
+
+          <span class="badge">Empieza en 2026</span>
+
+
         </div>
         <div class="bundle-body">
           <ul class="features">
@@ -835,6 +834,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="bundle-head">
           <h3 id="plan-premium" class="bundle-title">Plan Premium</h3>
           <div class="bundle-sub">Máxima exposición</div>
+
+            <span class="badge">Empieza en 2026</span>
+
         </div>
         <div class="bundle-body">
           <ul class="features">
