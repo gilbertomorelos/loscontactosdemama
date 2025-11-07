@@ -156,21 +156,21 @@
   },
 
   {
-    "nombre": "Espacio Disponible",
-    "descripcion": "Taller de Ciencia",
-    "imagen": "",
-    "enlace": "escuelaF.html",
-    "contacto": "contacto@escuelaF.com",
-    "categoria": "basico"
+    "nombre": "Colegio Alberi",
+    "descripcion": "Maternal, Preescolar, Primaria, Secundaria",
+    "imagen": "alberi_colegio.jpg",
+    "enlace": "www.alberimontessori.edu.mx",
+    "contacto": "Tel: 442 212 8199 ",
+    "categoria": "prioridad"
   },
 
   {
-    "nombre": "Espacio Disponible",
-    "descripcion": "Preescolar y Primaria",
-    "imagen": "escuela1.png",
+    "nombre": "Alex Salinas ",
+    "descripcion": "Salon & Esthetics & Spa",
+    "imagen": "alex_salinas.jpg",
     "enlace": "escuelaA.html",
-    "contacto": "info@escuelaA.com",
-    "categoria": "basico"
+    "contacto": "Tel: 442 486 6149",
+    "categoria": "intermedio"
   },
 
   {
