@@ -1,9 +1,26 @@
+[
+  {
+    "titulo": "Pay de Manzana Casero",
+    "autor": "Chef Mamá Moderna",
+    "fecha": "22/09/2025",
+    "contenido": "<p>Disfruta de este delicioso pay de manzana, fácil de preparar en casa.</p><ul><li>Ingredientes: 4 manzanas, 1 taza de azúcar, 1 cucharadita de canela, masa de pay.</li><li>Preparación: Precalienta el horno a 180°C. Pela y corta las manzanas. Mezcla con azúcar y canela. Coloca en la masa de pay. Hornea por 40 minutos.</li><li>Sirve caliente y disfruta.</li></ul>",
+    "imagen": "pay_manzana.jpg"
+  },
 
-{
-  "titulo": "Pay de Manzana Casero",
-  "autor": "Chef Mamá Moderna",
-  "fecha": "22/09/2025",
-  "contenido": "<p>Disfruta de este delicioso pay de manzana, fácil de preparar en casa.</p><ul><li>Ingredientes: 4 manzanas, 1 taza de azúcar, 1 cucharadita de canela, masa de pay.</li><li>Preparación: Precalienta el horno a 180°C. Pela y corta las manzanas. Mezcla con azúcar y canela. Coloca en la masa de pay. Hornea por 40 minutos.</li><li>Sirve caliente y disfruta.</li></ul>",
-  "imagen": "pay_manzana.jpg"
-}
+  {
+    "titulo": "Consejos de alimentación saludable",
+    "autor": "Equipo Encanto",
+    "fecha": "2025-10-07",
+    "contenido": "<p>🍌 Snack Saludable: Bites de Plátano con Avena</p><p><strong>Autor:</strong> Los Contactos de Mamá<br><strong>Fecha:</strong> 07/11/2025</p><p><strong>Ingredientes:</strong><br>1 plátano maduro<br>½ taza de avena<br>Canela al gusto</p><p><strong>Preparación:</strong><br>Aplasta el plátano, mezcla con la avena y la canela. Forma bolitas pequeñas y hornea 10-12 min a 180 °C.</p><p>✨ Rico, natural y listo en minutos.</p>",
+    "imagen": "/Fotos Anunciantes/bites_platano.jpg"
+  },
 
+  {
+      "titulo": "Tip para Mamás: Organiza tus mañanas",
+      "autor": "Los Contactos de Mamá",
+      "fecha": "07/11/2025",
+      "contenido": "<p>Empieza tus mañanas con energía preparando la ropa, los lonches y la mochila de los niños desde la noche anterior. Así tendrás más tiempo para un desayuno tranquilo y evitarás las prisas.</p><p>✨ Consejo extra: pon una lista en la puerta con lo que no deben olvidar — llaves, botella de agua, tareas y uniforme completo.</p>",
+      "imagen": "tips/organiza_mananas.jpg",
+      "categoria": "organizacion"
+  }
+]
