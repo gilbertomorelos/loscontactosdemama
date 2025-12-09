@@ -3,7 +3,7 @@
     "nombre": "Colegio Gran Bretaña",
     "descripcion": "Preescolar , Primaria , Secundaria , Preparatoria",
     "imagen": "Fotos Anunciantes/gran_bretaña.jpeg",
-    "enlace": "escuelaA.html",
+    "enlace": "",
     "contacto": "T: 442 257 1110",
     "ranking": "4.5 *",
     "categoria": "prioridad"
@@ -23,7 +23,7 @@
     "descripcion": "Preparatoria",
     "imagen": "Fotos Anunciantes/prepa_tec.jpeg",
     "enlace": "",
-    "contacto": "contacto pendiente",
+    "contacto": "tec.mx",
     "categoria": "prioridad"
   },
 
@@ -49,7 +49,7 @@
     "nombre": "UNIVA",
     "descripcion": "Universidad",
     "imagen": "Fotos Anunciantes/univa.jpeg",
-    "enlace": "escuelaD.html",
+    "enlace": "",
     "contacto": "contacto pendiente",
     "categoria": "intermedio"
   },
@@ -58,7 +58,7 @@
     "nombre": "UNIVERSIDAD VIZCAYA DE LAS AMERICAS",
     "descripcion": "Universidad",
     "imagen": "Fotos Anunciantes/vizcaya.png",
-    "enlace": "escuelaE.html",
+    "enlace": "",
     "contacto": "contacto pendiente",
     "categoria": "intermedio"
   },
@@ -67,7 +67,7 @@
     "nombre": "COLEGIO MARCELINA",
     "descripcion": "Escuela Primaria",
     "imagen": "Fotos Anunciantes/colegio_marcelina.png",
-    "enlace": "escuelaF.html",
+    "enlace": "",
     "contacto": "contacto pendiente",
     "categoria": "intermedio"
   },
@@ -76,7 +76,7 @@
     "nombre": "INSTITUTO THOMAS JEFFERSON",
     "descripcion": "Preescolar y Primaria",
     "imagen": "Fotos Anunciantes/thomas_jefferson.jpeg",
-    "enlace": "escuelaA.html",
+    "enlace": "",
     "contacto": "Contacto pendiente",
     "categoria": "prioridad"
   },
@@ -112,7 +112,7 @@
     "nombre": "Alquileres Monet",
     "descripcion": "Alquiler de Equipo para Eventos",
     "imagen": "Fotos Anunciantes/monet_lcm.jpg",
-    "enlace": "escuelaB.html",
+    "enlace": "www.facebook.com/alquileresmonet",
     "contacto": "T: 442 358 6523",
     "ranking": "4.5 *",
     "categoria": "prioridad"
@@ -122,7 +122,7 @@
     "nombre": "AIR GADGETS",
     "descripcion": "Accesorios para Iphone",
     "imagen": "Fotos Anunciantes/Air_gadgets.png",
-    "enlace": "escuelaC.html",
+    "enlace": "",
     "contacto": "airgadgets69@gmail.com | 7718885106",
     "ranking": "4.5 *",
     "categoria": "prioridad"
@@ -141,7 +141,7 @@
     "nombre": "Colegio Internacional de Querétaro",
     "descripcion": "Clases de Música",
     "imagen": "Fotos Anunciantes/colegio_internacional_queretaro.jpeg",
-    "enlace": "escuelaD.html",
+    "enlace": "",
     "contacto": "contacto pendiente",
     "categoria": "intermedio"
   },
@@ -173,31 +173,68 @@
     "categoria": "intermedio"
   },
 
+
   {
-    "nombre": "Escuela Espacio Disponible",
-    "descripcion": "Secundaria y Bachillerato",
-    "imagen": "escuela2.png",
-    "enlace": "escuelaB.html",
-    "contacto": "contacto@escuelaB.com",
+    "nombre": "LINGUATEC",
+    "descripcion": "LANGUAGE CENTER",
+    "imagen": "/Fotos Anunciantes/linguatec.jpeg",
+    "enlace": "",
+    "contacto": "Tel. 4424530351",
     "categoria": "prioridad"
   },
 
   {
-    "nombre": "Escuela Espacio Disponible",
-    "descripcion": "Secundaria y Bachillerato",
+    "nombre": "KUMON",
+    "descripcion": "Aprendizaje Extraescolar",
+    "imagen": "/Fotos Anunciantes/kumon.jpeg",
+    "enlace": "",
+    "contacto": "Tel. 4421377889",
+    "categoria": "prioridad"
+  },
+
+  {
+    "nombre": "COLEGIO WASHINGTON",
+    "descripcion": "Colégio Bicultural",
+    "imagen": "",
+    "enlace": "",
+    "contacto": "Tel. 4424987211",
+    "categoria": "prioridad"
+  },
+
+  {
+    "nombre": "INSTITUTO DICORMO",
+    "descripcion": "PREPARATORIA",
+    "imagen": "/Fotos Anunciantes/dicormo.png",
+    "enlace": "",
+    "contacto": "Tel. 5530158194",
+    "categoria": "prioridad"
+  },
+
+  {
+    "nombre": "GOLDEN ENGLISH",
+    "descripcion": "ESCUELA DE INGLES",
     "imagen": "escuela2.png",
     "enlace": "escuelaB.html",
-    "contacto": "contacto@escuelaB.com",
-    "categoria": "basico"
+    "contacto": "Tel. 4424763390",
+    "categoria": "prioridad"
+  },
+
+  {
+    "nombre": "COLEGIO AUSTRIACO",
+    "descripcion": "ESCUELA INTERCULTUAL",
+    "imagen": "escuela2.png",
+    "enlace": "",
+    "contacto": "Tel. 4423181197",
+    "categoria": "prioridad"
   },
 
   {
     "nombre": "Espacio Disponible",
-    "descripcion": "Talleres de Arte",
-    "imagen": "colegio1.png",
-    "enlace": "escuelaC.html",
-    "contacto": "hola@escuelaC.com",
-    "categoria": "intermedio"
+    "descripcion": "Forma parte de la plataforma",
+    "imagen": "/Fotos Anunciantes/logo_contactos_mama.png",
+    "enlace": "",
+    "contacto": "Tel. 4421697170",
+    "categoria": "prioridad"
   }
 
 ]
