@@ -195,7 +195,7 @@
   {
     "nombre": "COLEGIO WASHINGTON",
     "descripcion": "Colégio Bicultural",
-    "imagen": "",
+    "imagen": "/Fotos Anunciantes/colegio_washington.jpeg",
     "enlace": "",
     "contacto": "Tel. 4424987211",
     "categoria": "prioridad"
@@ -213,8 +213,8 @@
   {
     "nombre": "GOLDEN ENGLISH",
     "descripcion": "ESCUELA DE INGLES",
-    "imagen": "escuela2.png",
-    "enlace": "escuelaB.html",
+    "imagen": "/Fotos Anunciantes/golden_english.jpeg",
+    "enlace": "",
     "contacto": "Tel. 4424763390",
     "categoria": "prioridad"
   },
@@ -222,7 +222,7 @@
   {
     "nombre": "COLEGIO AUSTRIACO",
     "descripcion": "ESCUELA INTERCULTUAL",
-    "imagen": "escuela2.png",
+    "imagen": "/Fotos Anunciantes/colegio_austriaco.jpeg",
     "enlace": "",
     "contacto": "Tel. 4423181197",
     "categoria": "prioridad"
